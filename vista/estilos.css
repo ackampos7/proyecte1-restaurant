@@ -1,0 +1,41 @@
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.orange {
+    background-color: #FF7900;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #FF7900;
+}
+
+.card-img-top {
+    height: 224px;
+    width: 353px;
+    border-radius: 5px, 5px, 0px, 0px;
+
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-text {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 39px;
+    height: 39px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.titulo-seccion {
+    font-size: 35px;
+    color: #FF7900;
+
+}
+
