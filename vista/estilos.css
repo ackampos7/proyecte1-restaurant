@@ -1,25 +1,32 @@
-
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
 .categorias {
     display: flex;
     justify-content: space-evenly;
     margin: 40px 0px 40px 0px;
+    width: 100%;   
 
 }
 
 .orange {
     background-color: #FF7900;
-    display: flex;
-    justify-content: center;
-    border: 3px solid #FF7900;
-}
-
-.card-img-top {
-    height: 224px;
     width: 353px;
-    border-radius: 5px, 5px, 0px, 0px;
-
+    height: 265px;
+    border-radius: 5px;
+    border: 3px solid #FF7900;
+    padding-left: 0px;
+    padding-right: 0px;
 }
+
+.img-top {
+    height: 224px;
+    width: 348px;
+}
+
 
 .card-body {
     padding: 0;
@@ -38,34 +45,39 @@
 
 .seccion-card {
     display: flex;
-    justify-content: center;
     width: 1371px;
     margin: 40px 0px 40px 0px;
     border-radius: 1px;
     border: 2px solid #d9d9d9;
 }
 
+.div-img-noticias{
+    padding-left: 0;
+    padding-right: 0;
+}
 
 .contenedor {
-    height: 179px;
     width: 685.5px;
-    padding: 20px 0px 20px   20px;
+    padding: 20px 20px 20px 20px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .titulo-seccion {
     font-size: 35px;
     color: #FF7900;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .boton-vermas {
     background-color: #FF7900;
     color: #FFFFFF;
-    border: #FF7900;
-    border-radius: 0.5px;
-    padding: 12px 24px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    border: 1px solid #FF7900;
+    border-radius: 3px;
+    padding: 8px 24px 8px 24px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
 }
 
 .imgnoticias {
@@ -82,6 +94,8 @@
     width: 327px;
     border: 2px solid #d9d9d9;
     border-radius: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
     margin: 20px 10px 20px 10px;
 }
 
@@ -152,6 +166,27 @@
     margin-top: 10px;
 }
 
+.seccion-info{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0px 0px 100px 0px;
+}
 
-/*825 473*/
+.contenedor-info {
+    width: 366px;
+    height: 61px;
+}
 
+.titulo-info {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.texto-info {
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
