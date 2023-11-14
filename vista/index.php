@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="estilos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
+<?php
+    include_once '../vista/header.php';
+?>
+
 <body>
     <section class="row categorias">
         <div class="col-3 col-md-2 col-sm-1 orange">
@@ -93,16 +99,16 @@
         </div>
         <img src="../imagenes/ultimas-noticias.jpg" class="card-img imgnoticias" alt="">
     </section>
-    <section class="seccion-info">
-        <div class="contenedor-info">
+    <section class="row seccion-info">
+        <div class="col-4 col-md-6 col-sm-12 contenedor-info">
             <h3 class="titulo-info">Localización</h3>
             <p class="texto-info">Autovía A3 Valencia-Madrid, Salida 334. 46380<br><strong>Cheste (Valencia) – España</strong></p>
         </div>
-        <div class="contenedor-info">
+        <div class="col-4 col-md-6 col-sm-12 contenedor-info">
             <h3 class="titulo-info">Horarios</h3>
             <p class="texto-info"><strong>Atención telefónica:</strong><br> de lunes a viernes de 08:00 a 15:00 horas</p>
         </div>
-        <div class="contenedor-info">
+        <div class="col-4 col-md-6 col-sm-12 contenedor-info">
             <h3 class="titulo-info">Contacto</h3>
             <p class="texto-info"><strong>Teléfono:</strong> 96 252 52 20<br><strong>Correo:</strong> contacto@circuitricardotormo.com</p>
         </div>

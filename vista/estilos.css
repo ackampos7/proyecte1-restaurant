@@ -4,6 +4,11 @@ body {
     flex-direction: column;
 }
 
+.menu-header {
+    display: flex;
+    justify-content: center;
+}
+
 .categorias {
     display: flex;
     justify-content: space-evenly;
@@ -189,4 +194,9 @@ body {
     padding: 20px 0px 20px 0px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+}
+
+.div-productos {
+    display: flex;
+    justify-content: center;
 }

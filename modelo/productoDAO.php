@@ -1,6 +1,6 @@
 <?php
-    include_once 'modelo/producto.php';
-    include_once 'config/dataBase.php';
+    include_once '../modelo/producto.php';
+    include_once '../config/dataBase.php';
 
     class productoDAO {
         public static function getAllProducts() {
@@ -12,8 +12,15 @@
                 while ($producto = $result->fetch_object('Producto')) {
                     $productos[] = $producto;
                 }
-                return $products;
+                return $productos;
             }
         }
+
+        public static function añadirCarrito($id) {
+            $con = dataBase::connect();
+            $con->query("INSERT INTO PEDIDO-PRODUCTOS ")
+        
+        }
+
     }
 ?>

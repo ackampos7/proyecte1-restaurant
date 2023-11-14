@@ -6,4 +6,8 @@
         public static function index() {
             productoDAO::getAllProducts();
         }
+
+        public static function añadirCarrito($id) {
+             productoDAO::añadirCarrito($id);
+        }
     }
