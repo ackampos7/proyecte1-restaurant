@@ -1,6 +1,7 @@
 <?php
     include_once '../modelo/producto.php';
     include_once '../config/dataBase.php';
+    include_once '../config/functions.php';
 
     class productoDAO {
         public static function getAllProducts() {
@@ -16,10 +17,16 @@
             }
         }
 
+        public static function getProductById($id) {
+            $con = database::connect();
+            $result = $con->query("SELECT * FROM PRODUCTOS WHERE producto_id = $id;");
+            $productoCarro = $result->fetch_object('Producto');
+            return $productoCarro;
+        }
+
         public static function añadirCarrito($id) {
             $con = dataBase::connect();
-            $con->query("INSERT INTO PEDIDO-PRODUCTOS ")
-        
+            array_push($_SESSION["pedido"], $id);
         }
 
     }

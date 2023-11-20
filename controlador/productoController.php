@@ -7,6 +7,10 @@
             productoDAO::getAllProducts();
         }
 
+        public static function getProductById($id) {
+            productoDAO::getProductById($id);
+        }
+
         public static function añadirCarrito($id) {
              productoDAO::añadirCarrito($id);
         }
