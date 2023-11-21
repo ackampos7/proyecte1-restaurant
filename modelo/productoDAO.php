@@ -25,8 +25,24 @@
         }
 
         public static function añadirCarrito($id) {
-            $con = dataBase::connect();
-            array_push($_SESSION["pedido"], $id);
+
+            $found = false;
+            $position = -1;
+
+            foreach($_SESSION["pedido"] as $pos =>$productoCarro){
+                if($productoCarro[0] == $id){
+                    $found = true;
+                    $position = $pos;
+                }
+            }
+
+            if($found == false) {
+                $p = array($id, 1);
+                $_SESSION['pedido'] = $p;
+            } else {
+                $_SESSION["pedido"][$pos][1]++; 
+            }
+
         }
 
     }

@@ -200,3 +200,8 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.producto-carrito{
+    display: flex;
+    justify-content: center;
+}

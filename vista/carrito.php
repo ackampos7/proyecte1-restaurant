@@ -19,23 +19,40 @@
     <title>Restaurant Ricardo Tormo</title>
 </head>
 <body>
-<div>
-    <?php
-    foreach($_SESSION['pedido'] as $id) {
-        $productoCarro = productoDAO::getProductById($id);
+
+<?php
+    var_dump($_SESSION['pedido']);
+    echo "<br>";
+
+    foreach($_SESSION['pedido'] as $p) {
+        var_dump($p);
+        $productoCarro = productoDAO::getProductById($p[0]);
     ?>
 
-    <div>
+    <div class="producto-carrito">
         <img src=" <?php echo $productoCarro->getImg() ?>" width="150" height="150" alt="">
         <p><?= $productoCarro->getNombre() ?></p>
-        <p>1</p>
-        <p><?= $productoCarro->getPrecioUnidad() ?></p>
-
+        <form method="post">
+            <input type="hidden" name="idescondido" value="<?= $productoCarro->getProductoId() ?>">
+            <input type="submit" name="añadircantidad" value="+">        
+            <input type="submit" name="reducircantidad" value="-">
+            <input type="submit" name="borrarsesion" value="B">
+        </form>
+        <p><?= $productoCarro->getPrecioUnidad() ?>€</p>
     </div>
 
     <?php
     }
-    ?>
-</div>
+?>
+
+<?php
+    if(isset($_POST['borrarsesion'])){
+        echo "Hola";
+        $_SESSION['pedido'] = [];
+        session_unset();
+        session_destroy();
+    }
+?>
+
 </body>
 </html>

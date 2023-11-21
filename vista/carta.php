@@ -90,6 +90,7 @@
     if(isset($_POST['añadircarro'])) {
         $id = $_POST['escondido'];
         productoController::añadirCarrito($id);
+
     }
 
     ?>
