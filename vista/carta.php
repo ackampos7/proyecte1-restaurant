@@ -4,6 +4,12 @@
     include_once '../vista/header.php';
     include_once '../config/functions.php';
     $productos = productoDAO::getAllProducts();
+
+    if(isset($_POST['añadircarro'])) {
+        $id = $_POST['escondido'];
+        productoDAO::añadirCarrito($id);
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +37,8 @@
         <div class="col-12 col-md-6">
             <img src=" <?php echo $producto->getImg() ?>" width="300" height="300" alt="">
             <h3><?= $producto->getNombre() ?></h3>
-            <p><?= $producto->getPrecioUnidad() ?></p>
+            <p><?= $producto->getPrecioUnidad() ?>€</p>
+            <p> <?= $producto->getProductoId() ?> </p>
             <form action="" method="post">
                 <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
                 <input type="submit" name="añadircarro" value="Añadir al carrito">
@@ -52,7 +59,8 @@
         <div class="col-12 col-md-6">
             <img src=" <?php echo $producto->getImg() ?>" width="300" height="300" alt="">
             <h3><?= $producto->getNombre() ?></h3>
-            <p><?= $producto->getPrecioUnidad() ?></p>
+            <p><?= $producto->getPrecioUnidad() ?>€</p>
+            <p> <?= $producto->getProductoId() ?> </p>
             <form action="" method="post">
                 <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
                 <input type="submit" name="añadircarro" value="Añadir al carrito">
@@ -73,7 +81,8 @@
         <div class="col-12 col-md-6">
             <img src=" <?php echo $producto->getImg() ?>" width="300" height="300" alt="">
             <h3><?= $producto->getNombre() ?></h3>
-            <p><?= $producto->getPrecioUnidad() ?></p>
+            <p><?= $producto->getPrecioUnidad() ?>€</p>
+            <p> <?= $producto->getProductoId() ?> </p>
             <form action="" method="post">
                 <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
                 <input type="submit" name="añadircarro" value="Añadir al carrito">
@@ -85,15 +94,7 @@
     ?>  
     </div>
 
-    <?php
-
-    if(isset($_POST['añadircarro'])) {
-        $id = $_POST['escondido'];
-        productoController::añadirCarrito($id);
-
-    }
-
-    ?>
+    
 
 </body>
 </html>

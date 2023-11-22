@@ -25,24 +25,24 @@
         }
 
         public static function añadirCarrito($id) {
-
             $found = false;
             $position = -1;
-
-            foreach($_SESSION["pedido"] as $pos =>$productoCarro){
-                if($productoCarro[0] == $id){
-                    $found = true;
-                    $position = $pos;
+    
+            if(count($_SESSION['pedido']) > 0) {
+                for($i = 0; $i < count($_SESSION['pedido']); $i++){
+                    if($_SESSION['pedido'][$i][0] == $id) {
+                        $found = true;
+                        $position = $i;
+                    }
                 }
             }
-
+    
             if($found == false) {
                 $p = array($id, 1);
-                $_SESSION['pedido'] = $p;
+                array_push($_SESSION['pedido'], $p);
             } else {
-                $_SESSION["pedido"][$pos][1]++; 
+                $_SESSION["pedido"][$position][1]++; 
             }
-
         }
 
     }

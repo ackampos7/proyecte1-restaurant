@@ -21,36 +21,36 @@
 <body>
 
 <?php
-    var_dump($_SESSION['pedido']);
-    echo "<br>";
+    if(isset($_SESSION['pedido'])) {
+        foreach($_SESSION['pedido'] as $p) {
+            $productoCarro = productoDAO::getProductById($p[0]);
+            $cantidad = $p[1];
+        ?>
 
-    foreach($_SESSION['pedido'] as $p) {
-        var_dump($p);
-        $productoCarro = productoDAO::getProductById($p[0]);
-    ?>
+        <div class="producto-carrito">
+            <img src=" <?php echo $productoCarro->getImg() ?>" width="150" height="150" alt="">
+            <p><?= $productoCarro->getNombre() ?></p>
+            <form method="post">
+                <input type="hidden" name="idescondido" value="<?= $productoCarro->getProductoId() ?>">
+                <input type="hidden" name="cantidad" value="<?= $cantidad ?>">
+                <input type="submit" name="añadircantidad" value="+">        
+                <input type="submit" name="reducircantidad" value="-">
+                <p> <?= $p[1] ?> </p>
+                <input type="submit" name="borrarsesion" value="B">
+            </form>
+            <p><?= $productoCarro->getPrecioUnidad() ?>€</p>
+        </div>
 
-    <div class="producto-carrito">
-        <img src=" <?php echo $productoCarro->getImg() ?>" width="150" height="150" alt="">
-        <p><?= $productoCarro->getNombre() ?></p>
-        <form method="post">
-            <input type="hidden" name="idescondido" value="<?= $productoCarro->getProductoId() ?>">
-            <input type="submit" name="añadircantidad" value="+">        
-            <input type="submit" name="reducircantidad" value="-">
-            <input type="submit" name="borrarsesion" value="B">
-        </form>
-        <p><?= $productoCarro->getPrecioUnidad() ?>€</p>
-    </div>
-
-    <?php
+<?php
+        }
     }
+
 ?>
 
 <?php
-    if(isset($_POST['borrarsesion'])){
-        echo "Hola";
-        $_SESSION['pedido'] = [];
-        session_unset();
-        session_destroy();
+    if(isset($_POST["añadircantidad"])) {
+        $cantidad = $_POST['cantidad'];
+        $cantidad++;
     }
 ?>
 
