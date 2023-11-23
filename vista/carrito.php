@@ -2,6 +2,9 @@
     include_once '../config/functions.php';
     include_once '../vista/header.php';
     include_once '../controlador/productoController.php';
+    include_once '../controlador/pedidoController.php';
+    include_once '../modelo/calcularPrecioTotal.php';
+    include_once '../modelo/pedidoDAO.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,24 +24,49 @@
 <body>
 
 <?php
+    if(isset($_POST["añadircantidad"])) {
+        $idcantidad = $_POST['idescondido'];
+        pedidoController::sumarCantidad($idcantidad);
+        header('Location: ../vista/carrito.php');
+    }
+
+    if(isset($_POST['reducircantidad'])) {
+        $idcantidad = $_POST['idescondido'];
+        pedidoController::restarCantidad($idcantidad);
+        header('Location: ../vista/carrito.php');
+    }
+
+    if(isset($_POST['borrarproductocarrito'])){
+        $idborrar = $_POST['idescondido'];
+        pedidoController::borrarProductoCarrito($idborrar);
+        header('Location: ../vista/carrito.php');
+    }
+
+    if(!isset($preciototal)) {
+        $preciototal = 0;
+    }
+
     if(isset($_SESSION['pedido'])) {
         foreach($_SESSION['pedido'] as $p) {
             $productoCarro = productoDAO::getProductById($p[0]);
             $cantidad = $p[1];
+            $precioproductototal = calcularPrecioTotal::calcularPrecioProductoTotal($cantidad, $productoCarro->getPrecioUnidad());
+            $preciototal = $preciototal + $precioproductototal;
         ?>
 
-        <div class="producto-carrito">
+        <div class="col-12 producto-carrito">
             <img src=" <?php echo $productoCarro->getImg() ?>" width="150" height="150" alt="">
             <p><?= $productoCarro->getNombre() ?></p>
             <form method="post">
                 <input type="hidden" name="idescondido" value="<?= $productoCarro->getProductoId() ?>">
                 <input type="hidden" name="cantidad" value="<?= $cantidad ?>">
                 <input type="submit" name="añadircantidad" value="+">        
+                <p> <?= $cantidad ?> </p>
                 <input type="submit" name="reducircantidad" value="-">
-                <p> <?= $p[1] ?> </p>
-                <input type="submit" name="borrarsesion" value="B">
-            </form>
-            <p><?= $productoCarro->getPrecioUnidad() ?>€</p>
+                <input type="submit" name="borrarproductocarrito" value="X">
+                <p><?= $productoCarro->getPrecioUnidad() ?>€</p>
+                <p><?= $precioproductototal."€" ?></p>
+            </form>           
         </div>
 
 <?php
@@ -47,12 +75,8 @@
 
 ?>
 
-<?php
-    if(isset($_POST["añadircantidad"])) {
-        $cantidad = $_POST['cantidad'];
-        $cantidad++;
-    }
-?>
+<p><?= $preciototal ?></p>
+
 
 </body>
 </html>

@@ -1,5 +1,8 @@
 <?php
     include_once '../controlador/productoController.php';
+    include_once '../modelo/productoDAO.php';
+    include_once '../controlador/pedidoController.php';
+    include_once '../modelo/pedidoDAO.php';
     include_once '../modelo/Producto.php';
     include_once '../vista/header.php';
     include_once '../config/functions.php';
@@ -7,8 +10,8 @@
 
     if(isset($_POST['añadircarro'])) {
         $id = $_POST['escondido'];
-        productoDAO::añadirCarrito($id);
-
+        pedidoController::añadirCarrito($id);
+        header('Location: ../vista/carta.php');
     }
 ?>
 
