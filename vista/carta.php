@@ -6,6 +6,7 @@
     include_once '../modelo/Producto.php';
     include_once '../vista/header.php';
     include_once '../config/functions.php';
+    
     $productos = productoDAO::getAllProducts();
 
     if(isset($_POST['añadircarro'])) {

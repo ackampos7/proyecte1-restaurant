@@ -28,7 +28,10 @@
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>
-</nav>
+            <div class="container-fluid">
+                <a href="iniciosesion.php">Iniciar Sesión</a>
+            <div>
+            </nav>
             </div>
         </div>
         </nav>

@@ -15,3 +15,6 @@
              productoDAO::añadirCarrito($id);
         }
     }
+
+
+    ?>

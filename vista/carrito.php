@@ -75,7 +75,7 @@
 
 ?>
 
-<p><?= $preciototal ?></p>
+<p><?= $preciototal ?>€</p>
 
 
 </body>
