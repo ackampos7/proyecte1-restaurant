@@ -2,7 +2,7 @@
 
     class Usuario {
 
-        private $usuarioid;
+        private $usuario_id;
         private $nombre;
         private $apellidos;
         private $contraseña;
@@ -14,7 +14,7 @@
          */ 
         public function getUsuarioid()
         {
-                return $this->usuarioid;
+                return $this->usuario_id;
         }
 
         /**
@@ -22,9 +22,9 @@
          *
          * @return  self
          */ 
-        public function setUsuarioid($usuarioid)
+        public function setUsuarioid($usuario_id)
         {
-                $this->usuarioid = $usuarioid;
+                $this->usuario_id = $usuario_id;
 
                 return $this;
         }

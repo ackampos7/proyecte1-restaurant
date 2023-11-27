@@ -1,5 +1,6 @@
 <?php
     include_once '../config/functions.php';
+    require_once '../modelo/Usuario.php';
 ?>
 
 <header>
@@ -28,9 +29,27 @@
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>
+            
+
+            <?php
+            if(isset($_SESSION['usuario'])) {
+            ?>
+
             <div class="container-fluid">
-                <a href="iniciosesion.php">Iniciar Sesión</a>
-            <div>
+                <p> <?php $_SESSION['usuario']->getUsuarioid() ?> </p>
+            </div>
+
+            <?php
+                } else {
+            ?>
+                    <div class="container-fluid">
+                        <a href="iniciosesion.php">Iniciar Sesión</a>
+                    <div>
+
+            <?php
+                }
+            ?>
+
             </nav>
             </div>
         </div>

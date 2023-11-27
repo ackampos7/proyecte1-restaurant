@@ -5,6 +5,7 @@
     if(isset($_POST['iniciarsesion'])) {
         if(isset($_POST['email'], $_POST['contraseña'])) {
             $inicio = usuarioController::iniciarsesion($_POST['email'], $_POST['contraseña']);
+            header('Location: ../vista/iniciosesion.php');
         }
     }
 ?>
@@ -24,7 +25,6 @@
     <title>Restaurant Ricardo Tormo</title>
 </head>
 <body>
-
     <div>
         <h2>Iniciar sesión</h2>
         <form method="post">
@@ -36,6 +36,7 @@
         </form>
         <p><a href="registrosesion.php">Aún no tienes una cuenta? Crea una aquí</a></p>
     </div>
+    <p><?php print_r($_SESSION['usuario']) ?></p>
     
 </body>
 </html>
