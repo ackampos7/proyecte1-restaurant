@@ -3,8 +3,8 @@
     include_once '../controlador/usuarioController.php';
 
     if(isset($_POST['crearcuenta'])) {
-        if(isset($_POST['nombre'], $_POST['apellidos'], $_POST['email'], $_POST['contraseña'])){
-            usuarioController::createNewUser($_POST['nombre'], $_POST['apellidos'], $_POST['email'], $_POST['contraseña']);
+        if(isset($_POST['nombre'], $_POST['apellidos'], $_POST['contraseña'], $_POST['email'])){
+            usuarioController::createNewUser($_POST['nombre'], $_POST['apellidos'], $_POST['contraseña'], $_POST['email']);
         }
         header('Location: ../vista/iniciosesion.php');
     }
@@ -34,9 +34,9 @@
             <br>
             <input type="text" name="apellidos" placeholder="Apellidos">
             <br>
-            <input type="text" name="email" placeholder="Dirección de correo electrónico">
-            <br>
             <input type="password" name="contraseña" placeholder="Contraseña">
+            <br>
+            <input type="text" name="email" placeholder="Dirección de correo electrónico">
             <br>
             <input type="submit" name="crearcuenta" value="CREAR CUENTA">
         </form>

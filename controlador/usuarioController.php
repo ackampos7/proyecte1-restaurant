@@ -11,6 +11,10 @@
         public static function iniciarSesion($email, $contraseña) {
             usuarioDAO::iniciarSesion($email, $contraseña);
         }
+
+        public static function cerrarSesion(){
+            usuarioDAO::cerrarSesion();
+        }
     }
 
 

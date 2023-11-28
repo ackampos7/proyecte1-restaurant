@@ -1,8 +1,7 @@
 <?php
-
+require_once '../modelo/Usuario.php';
 include_once '../config/functions.php';
 include_once '../config/database.php';
-require_once '../modelo/Usuario.php';
 
 class usuarioDAO {
 
@@ -18,14 +17,15 @@ class usuarioDAO {
         $row = mysqli_fetch_assoc($result);
         $count = $row['countemail'];
 
-        if($count == 1) { 
-            //session_start();
+        if($count == 1) {
             $result = $con->query("SELECT * FROM USUARIOS WHERE EMAIL = '$email' LIMIT 1;");
-            $_SESSION['usuario'] = serialize($result->fetch_object('Usuario'));
-        } else {
-
+            $usuario = $result->fetch_object('Usuario');
+            $_SESSION['usuario'] = $usuario;
         }
+    }
 
+    public static function cerrarSesion() {
+        session_destroy();
     }
 
 }

@@ -36,7 +36,5 @@
         </form>
         <p><a href="registrosesion.php">Aún no tienes una cuenta? Crea una aquí</a></p>
     </div>
-    <p><?php print_r($_SESSION['usuario']) ?></p>
-    
 </body>
 </html>

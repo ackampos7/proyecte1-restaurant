@@ -1,6 +1,12 @@
 <?php
+    include_once '../modelo/Usuario.php';
     include_once '../config/functions.php';
-    require_once '../modelo/Usuario.php';
+    include_once '../controlador/usuarioController.php';
+
+    if(isset($_POST['cerrarsesion'])){
+        usuarioController::cerrarSesion();
+        header('Location: ../vista/index.php');
+    }
 ?>
 
 <header>
@@ -29,14 +35,16 @@
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>
-            
-
+            </nav>
             <?php
             if(isset($_SESSION['usuario'])) {
             ?>
 
             <div class="container-fluid">
-                <p> <?php $_SESSION['usuario']->getUsuarioid() ?> </p>
+                <p> <?php echo "Bienvenido, usuario." ?> </p>
+                <form method="post">
+                    <input type="submit" name="cerrarsesion" value="X">
+                </form>
             </div>
 
             <?php
@@ -49,8 +57,6 @@
             <?php
                 }
             ?>
-
-            </nav>
             </div>
         </div>
         </nav>

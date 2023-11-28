@@ -42,6 +42,10 @@
         header('Location: ../vista/carrito.php');
     }
 
+    if(isset($_POST['finalizarpedido'])){
+        pedidoController::finalizarPedido();
+    }
+
     if(!isset($preciototal)) {
         $preciototal = 0;
     }
@@ -66,7 +70,7 @@
                 <input type="submit" name="borrarproductocarrito" value="X">
                 <p><?= $productoCarro->getPrecioUnidad() ?>€</p>
                 <p><?= $precioproductototal."€" ?></p>
-            </form>           
+            </form>
         </div>
 
 <?php
@@ -75,7 +79,12 @@
 
 ?>
 
-<p><?= $preciototal ?>€</p>
+    <p><?= $preciototal ?>€</p>
+    <div>
+        <form method="post">
+            <input type="submit" name="finalizarpedido" value="Finalizar pedido">
+        </form>
+    </div>
 
 
 </body>

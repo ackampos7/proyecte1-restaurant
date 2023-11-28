@@ -88,7 +88,7 @@
             <button type="button" class="boton-descubre">Conoce el Restaurant</button>
         </div>
         <div class="col-2 col-md-1 col-sm-1">
-            <iframe width="672" height="378" src="https://www.youtube.com/embed/qfUnt-nE5S0?si=dZfQfZ-W3lj3URKN">
+            <iframe width="672" height="378" src="">
             </iframe>
         </div>
     </section>

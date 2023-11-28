@@ -1,5 +1,5 @@
 <?php
-
+    include_once '../modelo/Usuario.php';
     include_once '../config/database.php';
     include_once '../config/functions.php';
 
@@ -54,6 +54,18 @@
                     unset($_SESSION['pedido'][$i]);
                     $_SESSION['pedido'] = array_values($_SESSION['pedido']);
                 }
+            }
+        }
+
+        public static function finalizarPedido()  {
+            $con = database::connect();
+            $usuarioid = $_SESSION['usuario']->getUsuarioid();
+            $fechapedido = date("Y-m-d h:i:sa");
+            $result = $con->query("INSERT INTO PEDIDOS (usuario_id, fecha_pedido, estado) VALUES ('$usuarioid', $fechapedido, 'En proceso')");
+            $result = $con->query("SELECT PEDIDO_ID FROM PEDIDOS WHERE usuario_id = '$usuarioid' AND fecha_pedido = '$fechapedido'");
+
+            foreach($_SESSION['pedido'] as $producto) {
+                $pedidoid = $
             }
         }
     }
