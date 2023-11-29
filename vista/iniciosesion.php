@@ -5,7 +5,7 @@
     if(isset($_POST['iniciarsesion'])) {
         if(isset($_POST['email'], $_POST['contraseña'])) {
             $inicio = usuarioController::iniciarsesion($_POST['email'], $_POST['contraseña']);
-            header('Location: ../vista/iniciosesion.php');
+            header('Location: ../vista/index.php');
         }
     }
 ?>

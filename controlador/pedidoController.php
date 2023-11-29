@@ -19,6 +19,10 @@
         public static function borrarProductoCarrito($id) {
             pedidoDAO::borrarProductoCarrito($id);
         }
+
+        public static function finalizarPedido(){
+            pedidoDAO::finalizarPedido();
+        }
     }
 
 

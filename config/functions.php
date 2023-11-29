@@ -1,4 +1,5 @@
 <?php
+require_once '../modelo/Usuario.php';
 
 session_start();
 

@@ -1,5 +1,5 @@
 <?php
-    include_once '../modelo/Usuario.php';
+    require_once '../modelo/Usuario.php';
     include_once '../config/database.php';
     include_once '../config/functions.php';
 
@@ -60,12 +60,19 @@
         public static function finalizarPedido()  {
             $con = database::connect();
             $usuarioid = $_SESSION['usuario']->getUsuarioid();
-            $fechapedido = date("Y-m-d h:i:sa");
-            $result = $con->query("INSERT INTO PEDIDOS (usuario_id, fecha_pedido, estado) VALUES ('$usuarioid', $fechapedido, 'En proceso')");
-            $result = $con->query("SELECT PEDIDO_ID FROM PEDIDOS WHERE usuario_id = '$usuarioid' AND fecha_pedido = '$fechapedido'");
+            $date = date('Y-m-d H:i:s');
+            $result = $con->query("INSERT INTO pedidos (usuario_id, fecha_pedido, estado) VALUES ('$usuarioid', '$date', 'En proceso');");
+            $result = $con->query("SELECT pedido_id FROM pedidos WHERE usuario_id = '$usuarioid' AND fecha_pedido = '$date' LIMIT 1;");
+            $row = mysqli_fetch_assoc($result);
+            $pedidoid = $row['pedido_id'];
 
             foreach($_SESSION['pedido'] as $producto) {
-                $pedidoid = $
+                $productoid = $producto[0];
+                $cantidad = $producto[1];
+                $result = $con->query("SELECT precio_unidad FROM productos WHERE producto_id = '$productoid' LIMIT 1;");
+                $row = mysqli_fetch_assoc($result);
+                $preciounidad = $row['precio_unidad'];
+                $result = $con->query("INSERT INTO `pedido-productos` (pedido_id, producto_id, precio_unidad, cantidad) VALUES ('$pedidoid', '$productoid','$preciounidad','$cantidad');");
             }
         }
     }

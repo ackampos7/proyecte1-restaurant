@@ -15,6 +15,8 @@
 <?php
     include_once '../config/functions.php';
     include_once '../vista/header.php';
+
+    
 ?>
 
 <body>

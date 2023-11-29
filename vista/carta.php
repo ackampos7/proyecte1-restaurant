@@ -42,7 +42,6 @@
             <img src=" <?php echo $producto->getImg() ?>" width="300" height="300" alt="">
             <h3><?= $producto->getNombre() ?></h3>
             <p><?= $producto->getPrecioUnidad() ?>€</p>
-            <p> <?= $producto->getProductoId() ?> </p>
             <form action="" method="post">
                 <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
                 <input type="submit" name="añadircarro" value="Añadir al carrito">
@@ -64,7 +63,6 @@
             <img src=" <?php echo $producto->getImg() ?>" width="300" height="300" alt="">
             <h3><?= $producto->getNombre() ?></h3>
             <p><?= $producto->getPrecioUnidad() ?>€</p>
-            <p> <?= $producto->getProductoId() ?> </p>
             <form action="" method="post">
                 <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
                 <input type="submit" name="añadircarro" value="Añadir al carrito">
