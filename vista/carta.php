@@ -21,7 +21,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"><link href="../css/carta.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="../css/carta.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
@@ -48,18 +49,18 @@
         foreach($productos as $producto) {
             if($producto->getCategoriaId() == 1) {
     ?>
-        <div class="col-12  col-sm-12 col-md-6 col-lg-4 div-producto">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 div-producto">
             <div class="div-producto-img">
                 <img src=" <?php echo $producto->getImg() ?>" alt="Imagen de bocadillo vegetal">
             </div>
             <div class="div-producto-detalles">
                 <h3><?= $producto->getNombre() ?></h3>
                 <p><?= $producto->getPrecioUnidad() ?>€</p>
-                <form action="" method="post">
-                    <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
-                    <input type="submit" name="añadircarro" value="Añadir al carrito">
-                </form>
             </div>
+            <form action="" method="post">
+                <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
+                <input class="boton-añadir" type="submit" name="añadircarro" value="Añadir al carrito">    
+            </form>
         </div>
     <?php
         }  
