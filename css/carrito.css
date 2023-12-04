@@ -1,0 +1,47 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+.table-carrito {
+    width: 1277px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.table-header{
+    background-color: #ff7900;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.table-header th {
+    text-align: center;
+}
+
+.row-producto {
+    text-align: center;
+}
+
+.row-producto td {
+    width: 212.83px;
+}
+
+.td-cantidad {
+    display: flex;
+    justify-content:  center;
+}
+
+.td-cantidad input {
+    background-color: #ff7900;
+    border: none;
+    height: 23px;
+    width: 23px;
+    color: white;
+}
+
+.td-cantidad p {
+    margin: 0px 3px 0px 3px;
+}
