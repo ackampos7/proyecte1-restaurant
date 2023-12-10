@@ -1,3 +1,8 @@
+body {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 .container-fluid {
     display: flex;
     justify-content: center;

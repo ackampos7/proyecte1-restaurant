@@ -72,7 +72,7 @@
 <section class="container-fluid">
     <div class="row d-flex justify-content-center seccion-categoria">
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-categoria-titulo">
-            <h2>Bocadillos</h2>
+            <h2>Tapas</h2>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-categoria-img">
             <img src="../imagenes/categorias/categoriabocadillos.png" alt="Imagen de la categoria de bocadillos">
@@ -84,7 +84,7 @@
     <div class="row d-flex justify-content-center seccion-productos">
     <?php
         foreach($productos as $producto) {
-            if($producto->getCategoriaId() == 1) {
+            if($producto->getCategoriaId() == 2) {
     ?>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 div-producto">
             <div class="div-producto-img">
@@ -109,7 +109,7 @@
 <section class="container-fluid">
     <div class="row d-flex justify-content-center seccion-categoria">
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-categoria-titulo">
-            <h2>Bocadillos</h2>
+            <h2>Hamburguesas</h2>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-categoria-img">
             <img src="../imagenes/categorias/categoriabocadillos.png" alt="Imagen de la categoria de bocadillos">
@@ -121,7 +121,7 @@
     <div class="row d-flex justify-content-center seccion-productos">
     <?php
         foreach($productos as $producto) {
-            if($producto->getCategoriaId() == 1) {
+            if($producto->getCategoriaId() == 3) {
     ?>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 div-producto">
             <div class="div-producto-img">
