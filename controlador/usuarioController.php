@@ -1,6 +1,6 @@
 <?php
 
-    include_once '../modelo/usuarioDAO.php';
+    include_once 'modelo/usuarioDAO.php';
     
     class usuarioController {
 

@@ -1,10 +1,10 @@
 <?php
-    include_once '../config/functions.php';
-    include_once '../vista/header.php';
-    include_once '../controlador/productoController.php';
-    include_once '../controlador/pedidoController.php';
-    include_once '../modelo/calcularPrecioTotal.php';
-    include_once '../modelo/pedidoDAO.php';
+    include_once 'config/functions.php';
+    include_once 'vista/header.php';
+    include_once 'controlador/productoController.php';
+    include_once 'controlador/pedidoController.php';
+    include_once 'modelo/calcularPrecioTotal.php';
+    include_once 'modelo/pedidoDAO.php';
 ?>
 
 <!DOCTYPE html>

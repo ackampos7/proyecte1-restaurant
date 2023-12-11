@@ -1,6 +1,6 @@
 <?php
-    include_once '../vista/header.php';
-    include_once '../controlador/usuarioController.php';
+    include_once 'vista/header.php';
+    include_once 'controlador/usuarioController.php';
 
     if(isset($_POST['crearcuenta'])) {
         if(isset($_POST['nombre'], $_POST['apellidos'], $_POST['contraseña'], $_POST['email'])){

@@ -1,9 +1,12 @@
 <?php
 
-    include_once '../modelo/productoDAO.php';
+    include_once 'modelo/productoDAO.php';
     
     class productoController {
         public static function index() {
+            if(!isset($_GET['controller'])) {
+                include_once 'vista/home.php';
+            }
             productoDAO::getAllProducts();
         }
 

@@ -1,7 +1,7 @@
 <?php
-    require_once '../modelo/Usuario.php';
-    include_once '../config/database.php';
-    include_once '../config/functions.php';
+    require_once 'modelo/Usuario.php';
+    include_once 'config/database.php';
+    include_once 'config/functions.php';
 
     class pedidoDAO {
 

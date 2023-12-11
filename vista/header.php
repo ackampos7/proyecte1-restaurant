@@ -1,7 +1,7 @@
 <?php
-    include_once '../modelo/Usuario.php';
-    include_once '../config/functions.php';
-    include_once '../controlador/usuarioController.php';
+    include_once 'modelo/Usuario.php';
+    include_once 'config/functions.php';
+    include_once 'controlador/usuarioController.php';
 
     if(isset($_POST['cerrarsesion'])){
         usuarioController::cerrarSesion();

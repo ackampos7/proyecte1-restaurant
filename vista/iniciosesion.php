@@ -1,6 +1,6 @@
 <?php
-    include_once '../vista/header.php';
-    include_once '../controlador/usuarioController.php';
+    include_once 'vista/header.php';
+    include_once 'controlador/usuarioController.php';
 
     if(isset($_POST['iniciarsesion'])) {
         if(isset($_POST['email'], $_POST['contraseña'])) {
