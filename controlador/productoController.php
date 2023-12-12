@@ -5,9 +5,11 @@
     class productoController {
         public static function index() {
             if(!isset($_GET['controller'])) {
-                include_once 'vista/home.php';
+                include_once '../vista/home.php';
+            } else {
+                $productos = productoDAO::getAllProducts();
+                include_once 'vista/carta.php';
             }
-            productoDAO::getAllProducts();
         }
 
         public static function getProductById($id) {

@@ -4,6 +4,15 @@
 
 
     class pedidoController {
+        public static function index() {
+            if(!isset($_GET['controller'])) {
+                include_once 'vista/home.php';
+            } else {
+                include_once 'vista/carrito.php';
+            }
+        }
+
+
         public static function añadirCarrito($id) {
             pedidoDAO::añadirCarrito($id);
         }

@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <section class="row categorias">
+<section class="row categorias">
         <div class="col-3 col-md-2 col-sm-1 orange">
             <img src="../imagenes/bocatas-home.jpg" class="img-top" alt="">
             <div class="card-body">
@@ -101,6 +93,4 @@
             <h3 class="titulo-info">Contacto</h3>
             <p class="texto-info"><strong>Teléfono:</strong> 96 252 52 20<br><strong>Correo:</strong> contacto@circuitricardotormo.com</p>
         </div>
-    </section>
-</body>
-</html>
+</section>

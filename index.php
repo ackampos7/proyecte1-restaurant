@@ -1,5 +1,5 @@
 <?php
-    //include_once 'config/functions.php';
+    include_once 'config/functions.php';
     include_once 'config/parameters.php';
     include_once 'vista/header.php';
     include_once 'controlador/pedidoController.php';
@@ -28,5 +28,4 @@
         }
     }
 
-    
 ?>
