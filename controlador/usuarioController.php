@@ -16,8 +16,11 @@
             usuarioDAO::createNewUser($nombre, $apellidos, $contraseña, $email);
         }
 
-        public static function iniciarSesion($email, $contraseña) {
+        public static function iniciarSesion() {
+            $email = $_POST['email'];
+            $contraseña = $_POST['contraseña'];
             usuarioDAO::iniciarSesion($email, $contraseña);
+            header("Location:".URL."?controller=home"); 
         }
 
         public static function cerrarSesion(){

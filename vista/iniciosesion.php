@@ -1,13 +1,6 @@
 <?php
     include_once 'vista/header.php';
     include_once 'controlador/usuarioController.php';
-
-    if(isset($_POST['iniciarsesion'])) {
-        if(isset($_POST['email'], $_POST['contraseña'])) {
-            $inicio = usuarioController::iniciarsesion($_POST['email'], $_POST['contraseña']);
-            header('Location: ../vista/index.php');
-        }
-    }
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +20,7 @@
 <body>
     <div>
         <h2>Iniciar sesión</h2>
-        <form method="post">
+        <form action="<?= URL ?>?controller=usuario&action=iniciarSesion" method="post">
             <input type="text" name="email" placeholder="Dirección de correo electronico">
             <br>
             <input type="password" name="contraseña" placeholder="Contraseña">

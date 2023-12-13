@@ -35,13 +35,13 @@
             <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.php">Inicio</a>
+                <a class="nav-link" href="<?= URL ?>?controller=home">Inicio</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="carta.php">Carta</a>
+                <a class="nav-link" href="<?= URL ?>?controller=producto">Carta</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="carrito.php">Carrito</a>
+                <a class="nav-link" href="<?= URL ?>?controller=pedido">Carrito</a>
                 </li>
             </ul>
             <nav class="navbar bg-body-tertiary">
@@ -60,7 +60,7 @@
                 } else {
             ?>
                     <div class="container-fluid">
-                        <a href="iniciosesion.php">Iniciar Sesión</a>
+                        <a href="<?= URL ?>?controller=usuario">Iniciar Sesión</a>
                     <div>
 
             <?php

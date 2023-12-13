@@ -7,11 +7,6 @@
     include_once 'vista/header.php';
     include_once 'config/functions.php';
 
-    if(isset($_POST['añadircarro'])) {
-        $id = $_POST['escondido'];
-        pedidoController::añadirCarrito($id);
-        header('Location: ../vista/carta.php');
-    }
 ?>
 
 <section class="container-fluid">
@@ -39,7 +34,7 @@
                 <h3><?= $producto->getNombre() ?></h3>
                 <p><?= $producto->getPrecioUnidad() ?>€</p>
             </div>
-            <form action="" method="post">
+            <form action="<?= URL ?>?controller=producto&action=añadirCarrito" method="post">
                 <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
                 <input class="boton-añadir" type="submit" name="añadircarro" value="Añadir al carrito">    
             </form>
@@ -76,7 +71,7 @@
                 <h3><?= $producto->getNombre() ?></h3>
                 <p><?= $producto->getPrecioUnidad() ?>€</p>
             </div>
-            <form action="" method="post">
+            <form action="<?= URL ?>?controller=producto&action=añadirCarrito" method="post">
                 <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
                 <input class="boton-añadir" type="submit" name="añadircarro" value="Añadir al carrito">    
             </form>
@@ -113,7 +108,7 @@
                 <h3><?= $producto->getNombre() ?></h3>
                 <p><?= $producto->getPrecioUnidad() ?>€</p>
             </div>
-            <form action="" method="post">
+            <form action="<?= URL ?>?controller=producto&action=añadirCarrito" method="post">
                 <input type="hidden" name="escondido" value="<?= $producto->getProductoId() ?>">
                 <input class="boton-añadir" type="submit" name="añadircarro" value="Añadir al carrito">    
             </form>

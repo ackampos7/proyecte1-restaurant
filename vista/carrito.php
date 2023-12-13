@@ -1,8 +1,8 @@
 <?php
     include_once 'config/functions.php';
-    include_once 'vista/header.php';
     include_once 'controlador/productoController.php';
     include_once 'controlador/pedidoController.php';
+    include_once 'modelo/Producto.php';
     include_once 'modelo/calcularPrecioTotal.php';
     include_once 'modelo/pedidoDAO.php';
 ?>
@@ -23,27 +23,6 @@
 </head>
 <body>
 <?php
-if(isset($_POST["añadircantidad"])) {
-        $idcantidad = $_POST['idescondido'];
-        pedidoController::sumarCantidad($idcantidad);
-        header('Location: ../vista/carrito.php');
-    }
-
-    if(isset($_POST['reducircantidad'])) {
-        $idcantidad = $_POST['idescondido'];
-        pedidoController::restarCantidad($idcantidad);
-        header('Location: ../vista/carrito.php');
-    }
-
-    if(isset($_POST['borrarproductocarrito'])){
-        $idborrar = $_POST['idescondido'];
-        pedidoController::borrarProductoCarrito($idborrar);
-        header('Location: ../vista/carrito.php');
-    }
-
-    if(isset($_POST['finalizarpedido'])){
-        pedidoController::finalizarPedido();
-    }
 
     if(!isset($preciototal)) {
         $preciototal = 0;
@@ -71,20 +50,23 @@ if(isset($_POST["añadircantidad"])) {
             <td><img src="<?php echo $productoCarro->getImg() ?>" height="143" width="212.83" alt=""></td>
             <td><?= $productoCarro->getNombre() ?></td>
             <td>
-                <form method="post" class="td-cantidad">
+                <form action="<?= URL ?>?controller=pedido&action=sumarCantidad" method="post" class="td-cantidad">
                     <input type="hidden" name="idescondido" value="<?= $productoCarro->getProductoId() ?>">
                     <input type="hidden" name="cantidad" value="<?= $cantidad ?>">
-                    <input type="submit" name="añadircantidad" value="+">
+                    <input type="submit" name="sumarCantidad" value="+">
                     <p><?= $cantidad ?></p>
-                    <input type="submit" name="reducircantidad" value="-">        
+                </form>
+                <form action="<?= URL ?>?controller=pedido&action=restarCantidad" method="post" class="td-cantidad">
+                    <input type="hidden" name="idescondido" value="<?= $productoCarro->getProductoId() ?>">
+                    <input type="submit" name="restarcantidad" value="-">        
                 </form>
             </td>
             <td><p><?= $productoCarro->getPrecioUnidad() ?>€</p></td>
             <td><p><?= $precioproductototal."€" ?></p></td>
             <td>
-                <form method="post">
+                <form action="<?= URL ?>?controller=pedido&action=borrarProductoCarrito" method="post" class="td-cantidad">
                     <input type="hidden" name="idescondido" value="<?= $productoCarro->getProductoId() ?>">
-                    <input type="submit" name="borrarproductocarrito" value="X">
+                    <input type="submit" name="borrarProductoCarrito" value="X">
                 </form>
             </td>
         </tr>
@@ -94,6 +76,13 @@ if(isset($_POST["añadircantidad"])) {
         ?>
     </table>
 </div>
+    <p><?= $preciototal ?>€</p>
+        <div>
+            <form action="<?= URL ?>?controller=pedido&action=finalizarPedido" method="post">
+                <input type="submit" name="finalizarpedido" value="Finalizar pedido">
+            </form>
+        </div>
+    <?= $_SESSION['usuario']->getUsuarioId(); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

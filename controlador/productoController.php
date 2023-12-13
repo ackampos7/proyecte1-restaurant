@@ -16,8 +16,28 @@
             productoDAO::getProductById($id);
         }
 
-        public static function añadirCarrito($id) {
-             productoDAO::añadirCarrito($id);
+        public static function añadirCarrito() {
+            $id = $_POST['escondido'];
+            $found = false;
+            $position = -1;
+
+            if(count($_SESSION['pedido']) > 0) {
+                for($i = 0; $i < count($_SESSION['pedido']); $i++){
+                    if($_SESSION['pedido'][$i][0] == $id) {
+                        $found = true;
+                        $position = $i;
+                    }
+                }
+            }
+
+            if($found == false) {
+                $p = array($id, 1);
+                array_push($_SESSION['pedido'], $p);
+            } else {
+                $_SESSION["pedido"][$position][1]++; 
+            }
+
+            header("Location:".URL."?controller=producto&action=index");
         }
     }
 
