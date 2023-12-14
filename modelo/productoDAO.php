@@ -24,5 +24,10 @@
             return $productoCarro;
         }
 
+        public static function eliminarProducto($id){
+            $con = database::connect();
+            $result = $con->query("DELETE FROM PRODUCTOS WHERE producto_id = '$id'");
+        }
+
     }
 ?>

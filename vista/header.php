@@ -2,11 +2,8 @@
     include_once 'modelo/Usuario.php';
     include_once 'config/functions.php';
     include_once 'controlador/usuarioController.php';
+    include_once 'controlador/micuentaController.php';
 
-    if(isset($_POST['cerrarsesion'])){
-        usuarioController::cerrarSesion();
-        header('Location: ../vista/index.php');
-    }
 ?>
 
 <!DOCTYPE html>
@@ -50,8 +47,8 @@
             ?>
 
             <div class="container-fluid">
-                <p> <?php echo "Bienvenido, usuario." ?> </p>
-                <form method="post">
+             <p><a href="<?= URL ?>?controller=micuenta">Mi Cuenta</a></p>
+                <form action="<?= URL ?>?controller=usuario&action=cerrarSesion" method="post">
                     <input type="submit" name="cerrarsesion" value="X">
                 </form>
             </div>

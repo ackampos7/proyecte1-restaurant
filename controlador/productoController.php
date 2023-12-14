@@ -37,7 +37,7 @@
                 $_SESSION["pedido"][$position][1]++; 
             }
 
-            header("Location:".URL."?controller=producto&action=index");
+            header("Location:".URL."?controller=producto");
         }
     }
 

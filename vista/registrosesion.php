@@ -2,12 +2,12 @@
     include_once 'vista/header.php';
     include_once 'controlador/usuarioController.php';
 
-    if(isset($_POST['crearcuenta'])) {
+    /*if(isset($_POST['crearcuenta'])) {
         if(isset($_POST['nombre'], $_POST['apellidos'], $_POST['contraseña'], $_POST['email'])){
             usuarioController::createNewUser($_POST['nombre'], $_POST['apellidos'], $_POST['contraseña'], $_POST['email']);
         }
         header('Location: ../vista/iniciosesion.php');
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
     <div>
         <h2>Crear una cuenta</h2>
         <p><a href="iniciosesion.php">Ya tienes una cuenta? Inicia sesión aquí</a></p>
-        <form method="post">
+        <form action="<?= URL ?>?controller=usuario&action=createNewUser" method="post">
             <input type="text" name="nombre" placeholder="Nombre">
             <br>
             <input type="text" name="apellidos" placeholder="Apellidos">

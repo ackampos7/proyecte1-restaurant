@@ -27,7 +27,7 @@
             <br>
             <input type="submit" name="iniciarsesion" value="INICIAR SESIÓN">
         </form>
-        <p><a href="registrosesion.php">Aún no tienes una cuenta? Crea una aquí</a></p>
+        <p><a href="<?= URL ?>?controller=usuario&action=registroVista">Aún no tienes una cuenta? Crea una aquí</a></p>
     </div>
 </body>
 </html>
