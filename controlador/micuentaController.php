@@ -22,8 +22,26 @@
             if(isset($_POST['modificar'])){
                 include_once 'vista/modificarproducto.php';
             } else if(isset($_POST['eliminar'])){
-                eliminar($id);
+                micuentaController::eliminar($id);
             }
+        }
+
+        public static function añadirProducto(){
+            $nombre = $_POST['nombreproducto'];
+            $precio = $_POST['precioproducto'];
+            $categoria = $_POST['categoria'];
+            productoDAO::añadirProducto($nombre, $precio, $categoria                                                      v v    v  bbvbvc     );
+            header("Location:".URL."?controller=micuenta");
+        }
+
+        public static function modificarProducto(){
+            $id = $_POST['idescondido'];
+            $nombre = $_POST['nombreproducto'];
+            $precio = $_POST['precioproducto'];
+            $categoria = $_POST['categoria'];
+            productoDAO::modificarProducto($nombre, $precio, $categoria, $id);
+            //echo "Nombre: ".$nombre." Precio: ".$precio." Categoria: ".$categoria." ID: ".$id;
+            header("Location:".URL."?controller=micuenta");
         }
 
         public static function eliminar($id){

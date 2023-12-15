@@ -24,6 +24,16 @@
             return $productoCarro;
         }
 
+        public static function añadirProducto($nombre, $precio, $categoria){
+            $con = database::connect();
+            $result = $con->query("INSERT INTO PRODUCTOS (nombre_producto, precio_unidad, categoria_id) VALUES ('$nombre', '$precio', '$categoria';");
+        }
+
+        public static function modificarProducto($nombre, $precio, $categoria, $id) {
+            $con = database::connect();
+            $result = $con->query("UPDATE PRODUCTOS SET nombre_producto = '$nombre', precio_unidad = '$precio', categoria_id = '$categoria' WHERE producto_id = '$id';");
+        }
+
         public static function eliminarProducto($id){
             $con = database::connect();
             $result = $con->query("DELETE FROM PRODUCTOS WHERE producto_id = '$id'");

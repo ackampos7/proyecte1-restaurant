@@ -1,4 +1,7 @@
 <section class="container-fluid">
+    <form action="<?= URL ?>?controller=micuenta&action=añadirProducto" method="post">
+        <input type="submit" name="añadir" value="Añadir producto">
+    </form>
     <table>
     <tr class="table-header">
             <th>ID</th>

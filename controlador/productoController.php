@@ -16,6 +16,7 @@
             productoDAO::getProductById($id);
         }
 
+
         public static function añadirCarrito() {
             $id = $_POST['escondido'];
             $found = false;
