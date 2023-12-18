@@ -26,7 +26,7 @@
 
         public static function añadirProducto($nombre, $precio, $categoria){
             $con = database::connect();
-            $result = $con->query("INSERT INTO PRODUCTOS (nombre_producto, precio_unidad, categoria_id) VALUES ('$nombre', '$precio', '$categoria';");
+            $result = $con->query("INSERT INTO PRODUCTOS (nombre_producto, precio_unidad, categoria_id) VALUES ('$nombre', '$precio', '$categoria');");
         }
 
         public static function modificarProducto($nombre, $precio, $categoria, $id) {

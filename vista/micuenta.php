@@ -1,5 +1,7 @@
+<?php if(get_class($_SESSION['usuario']) == "Administrador") { ?>
+
 <section class="container-fluid">
-    <form action="<?= URL ?>?controller=micuenta&action=añadirProducto" method="post">
+    <form action="<?= URL ?>?controller=micuenta&action=añadirVista" method="post">
         <input type="submit" name="añadir" value="Añadir producto">
     </form>
     <table>
@@ -29,3 +31,11 @@
     ?>
     </table>
 </section>
+<?php } else { 
+?>
+    <div>
+        <p><?= $_COOKIE['ultimopedido'] ?></p>
+    </div>  
+
+<?php }  ?>
+

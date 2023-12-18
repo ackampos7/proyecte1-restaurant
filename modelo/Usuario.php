@@ -2,12 +2,13 @@
 
     class Usuario {
 
-        private $usuario_id;
-        private $nombre;
-        private $apellidos;
-        private $contraseña;
-        private $email;
-        private $rol;
+        protected $usuario_id;
+        protected $nombre;
+        protected $apellidos;
+        protected $contraseña;
+        protected $email;
+        protected $rol;
+
 
         /**
          * Get the value of usuarioid

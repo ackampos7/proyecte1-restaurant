@@ -1,6 +1,7 @@
 <?php
 
     include_once 'modelo/pedidoDAO.php';
+    include_once 'modelo/productoDAO.php';
     include_once 'config/functions.php';
 
 
@@ -20,17 +21,27 @@
             $id = $_POST['idescondido'];
 
             if(isset($_POST['modificar'])){
+                $producto = productoDAO::getProductById($id);
                 include_once 'vista/modificarproducto.php';
             } else if(isset($_POST['eliminar'])){
                 micuentaController::eliminar($id);
             }
         }
 
+        public static function añadirVista(){
+            if(!isset($_GET['controller'])) {
+                include_once 'vista/home.php';
+            } else {
+                include_once 'vista/añadirproducto.php';
+            }
+
+        }
+
         public static function añadirProducto(){
             $nombre = $_POST['nombreproducto'];
             $precio = $_POST['precioproducto'];
             $categoria = $_POST['categoria'];
-            productoDAO::añadirProducto($nombre, $precio, $categoria                                                      v v    v  bbvbvc     );
+            productoDAO::añadirProducto($nombre, $precio, $categoria);
             header("Location:".URL."?controller=micuenta");
         }
 
@@ -40,7 +51,6 @@
             $precio = $_POST['precioproducto'];
             $categoria = $_POST['categoria'];
             productoDAO::modificarProducto($nombre, $precio, $categoria, $id);
-            //echo "Nombre: ".$nombre." Precio: ".$precio." Categoria: ".$categoria." ID: ".$id;
             header("Location:".URL."?controller=micuenta");
         }
 

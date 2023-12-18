@@ -1,13 +1,8 @@
 <?php
+include_once 'modelo/Usuario.php';
+
 
     class Cliente extends Usuario {
-
-        private $usuario_id;
-        private $nombre;
-        private $apellidos;
-        private $contraseña;
-        private $email;
-        private $rol;
 
         function __construct(){
         }

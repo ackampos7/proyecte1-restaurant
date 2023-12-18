@@ -57,6 +57,8 @@
         }
 
         public static function finalizarPedido(){
+            $preciototal = $_POST['preciototal'];
+            setcookie("ultimopedido", $preciototal);
             pedidoDAO::finalizarPedido();
             //header("Location:".URL."?controller=pedido"); 
         }

@@ -1,5 +1,6 @@
 <?php
-require_once 'modelo/Usuario.php';
+    include_once 'modelo/Administrador.php';
+    include_once 'modelo/Cliente.php';
 
 session_start();
 

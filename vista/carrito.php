@@ -79,6 +79,7 @@
     <p><?= $preciototal ?>€</p>
         <div>
             <form action="<?= URL ?>?controller=pedido&action=finalizarPedido" method="post">
+                <input type="hidden" name="preciototal" value="<?= $preciototal ?>">
                 <input type="submit" name="finalizarpedido" value="Finalizar pedido">
             </form>
         </div>
