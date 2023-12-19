@@ -60,7 +60,8 @@
             $preciototal = $_POST['preciototal'];
             setcookie("ultimopedido", $preciototal);
             pedidoDAO::finalizarPedido();
-            //header("Location:".URL."?controller=pedido"); 
+            $_SESSION['pedido'] = [];
+            header("Location:".URL."?controller=pedido"); 
         }
     }
 

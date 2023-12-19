@@ -28,6 +28,7 @@ body {
 
 .div-categoria-img {
     padding: 0px;
+    overflow: hidden;
 }
 
 .div-categoria-img img {
@@ -40,7 +41,7 @@ body {
 }
 
 .div-producto {
-    max-width: 450px;
+    max-width: 430px;
     border-radius: 5px;
     margin: 15px;
 }

@@ -8,6 +8,9 @@
                 include_once '../vista/home.php';
             } else {
                 $productos = productoDAO::getAllProducts();
+                $bocadillos = productoDAO::getProductByType(1);
+                $tapas = productoDAO::getProductByType(2);
+                $hamburguesas = productoDAO::getProductByType(3);
                 include_once 'vista/carta.php';
             }
         }

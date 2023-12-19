@@ -8,10 +8,11 @@
         public static function finalizarPedido()  {
             $con = database::connect();
             $usuarioid = $_SESSION['usuario']->getUsuarioid();
-            $date = date('Y-m-d H:i:s');
+            $date = date('Y-m-d.H:i:s');
             echo $usuarioid;
             $result = $con->query("INSERT INTO pedidos (usuario_id, fecha_pedido, estado) VALUES ('$usuarioid', '$date', 'En proceso');");
             $pedidoid = mysqli_insert_id($con);
+            echo $pedidoid;
 
             foreach($_SESSION['pedido'] as $producto) {
                 $productoid = $producto[0];

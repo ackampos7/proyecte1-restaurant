@@ -1,10 +1,5 @@
 <?php
-    class Producto{
-        protected $producto_id;
-        protected $nombre_producto;
-        protected $precio_unidad;
-        protected $categoria_id;
-        protected $img;
+    class Hamburguesa extends Producto{
 
         function __construct(){
         }

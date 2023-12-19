@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Temps de generació: 15-12-2023 a les 17:30:31
+-- Temps de generació: 19-12-2023 a les 16:22:38
 -- Versió del servidor: 10.4.32-MariaDB
 -- Versió de PHP: 8.2.12
 
@@ -180,7 +180,18 @@ INSERT INTO `pedido-productos` (`pedido_id`, `producto_id`, `precio_unidad`, `ca
 (36, 5, 4.5, 3, ''),
 (36, 10, 3.75, 1, ''),
 (36, 7, 3.5, 1, ''),
-(36, 8, 4.25, 4, '');
+(36, 8, 4.25, 4, ''),
+(37, 8, 4.25, 3, ''),
+(37, 14, 7, 7, ''),
+(37, 9, 5, 1, ''),
+(37, 6, 4.75, 2, ''),
+(37, 7, 3.45, 1, ''),
+(38, 8, 4.25, 3, ''),
+(38, 11, 4.5, 1, ''),
+(38, 6, 4.74, 11, ''),
+(39, 8, 4.25, 3, ''),
+(39, 11, 4.5, 6, ''),
+(39, 6, 4.74, 11, '');
 
 -- --------------------------------------------------------
 
@@ -235,7 +246,10 @@ INSERT INTO `pedidos` (`pedido_id`, `usuario_id`, `fecha_pedido`, `estado`) VALU
 (33, 1, '2023-12-13', 'En proceso'),
 (34, 1, '2023-12-13', 'En proceso'),
 (35, 2, '2023-12-13', 'En proceso'),
-(36, 2, '2023-12-14', 'En proceso');
+(36, 2, '2023-12-14', 'En proceso'),
+(37, 1, '2023-12-18', 'En proceso'),
+(38, 1, '2023-12-19', 'En proceso'),
+(39, 1, '2023-12-19', 'En proceso');
 
 -- --------------------------------------------------------
 
@@ -256,12 +270,24 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`producto_id`, `nombre_producto`, `precio_unidad`, `categoria_id`, `img`) VALUES
-(6, 'Patatas Bravas', 4.75, 2, '../imagenes/productos/tapas/bravas.jpg'),
-(7, 'Hamburguesa de pollo', 3.5, 3, '../imagenes/productos/hamburguesas/pollo.jpg'),
-(8, 'Bocadillo de jamón y queso', 4.25, 1, '../imagenes/productos/bocadillos/jamonqueso.jpg'),
-(9, 'Pulpo a la gallega', 5, 2, '../imagenes/productos/tapas/pulpo.jpg'),
-(10, 'Hamburguesa vegetariana', 3.75, 3, '../imagenes/productos/hamburguesas/vegetariana.jpg'),
-(11, 'Bocadillo vegetal', 4.5, 1, 'imagenes/productos/bocadillos/vegetal.jpg');
+(6, 'Patatas Bravas', 4.74, 2, 'imagenes/productos/tapas/bravas.jpg'),
+(7, 'Hamburguesa de pollo', 3.45, 3, 'imagenes/productos/hamburguesas/pollo.jpg'),
+(8, 'Bocadillo de jamón y queso', 4.25, 1, 'imagenes/productos/bocadillos/jamonqueso.jpg'),
+(9, 'Pulpo a la gallega', 5, 2, 'imagenes/productos/tapas/pulpo.jpg'),
+(10, 'Hamburguesa vegetariana', 3.75, 3, 'imagenes/productos/hamburguesas/vegetariana.jpg'),
+(11, 'Bocadillo vegetal', 4.5, 1, 'imagenes/productos/bocadillos/vegetal.jpg'),
+(15, 'Bocadillo de chorizo', 4.75, 1, 'imagenes/productos/bocadillos/chorizo.jpg'),
+(16, 'Croquetas', 5, 2, 'imagenes/productos/tapas/croquetas.jpeg'),
+(17, 'Hamburguesa de ternera', 3.45, 3, 'imagenes/productos/hamburguesas/ternera.webp'),
+(18, 'Bocadillo de carne picada', 5, 1, 'imagenes/productos/bocadillos/carnepicada.jpeg'),
+(19, 'Pinchos de tortilla', 3, 2, 'imagenes/productos/tapas/tortilla.jpg'),
+(20, 'Hamburguesa parrillera', 4.25, 3, 'imagenes/productos/hamburguesas/parrillera.webp'),
+(21, 'Bocadillo de lomo ', 4.5, 1, 'imagenes/productos/bocadillos/lomo.jpg'),
+(22, 'Bocadillo de tortilla', 4.75, 1, 'imagenes/productos/bocadillos/bocadillotortilla.jpg'),
+(23, 'Pinchos de olivas', 3.25, 2, 'imagenes/productos/tapas/oliva.jpg'),
+(24, 'Pinchos morrunos', 3.75, 2, 'imagenes/productos/tapas/pinchos.jpg'),
+(25, 'Hamburguesa triple cheddar', 5.5, 3, 'imagenes/productos/hamburguesas/triplecheddar.jpg'),
+(26, 'Hamburguesa de bacon', 4.75, 3, 'imagenes/productos/hamburguesas/bacon.png');
 
 -- --------------------------------------------------------
 
@@ -332,13 +358,13 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT per la taula `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `pedido_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `pedido_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT per la taula `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `producto_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `producto_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT per la taula `usuarios`
