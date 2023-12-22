@@ -30,7 +30,7 @@
         public static function getProductByType($tipo) {
             $con = database::connect();
             $stmt = $con->prepare("SELECT * FROM PRODUCTOS WHERE categoria_id=?");
-            $stmt->bind_param("s", $tipo);
+            $stmt->bind_param("i", $tipo);
             $stmt->execute();
             $result = $stmt->get_result();
             $con->close();
@@ -46,7 +46,7 @@
             $listaProductos = [];
             
             while($productoDB = $result->fetch_object($categoria)){
-                $listaProductos = $productoDB;
+                $listaProductos[] = $productoDB;
             }
 
             return $listaProductos;

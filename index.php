@@ -28,4 +28,5 @@
         }
     }
 
+    include_once 'vista/footer.php';
 ?>
