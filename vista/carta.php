@@ -11,11 +11,11 @@
 
 <section class="container-fluid">
     <div class="row d-flex justify-content-center seccion-presentacion">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-categoria-titulo">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-presentacion-titulo">
             <h2>La carta</h2>
         </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-categoria-img">
-            <img src="imagenes/categorias/categoriabocadillos.png" alt="Imagen de la categoria de bocadillos">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-presentacion-img">
+            <img src="imagenes/categorias/categoriacarta.png" alt="Imagen de la categoria de bocadillos">
         </div>
     </div>
 </section>
