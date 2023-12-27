@@ -1,35 +1,40 @@
+<div class="container-fluid">
 <section class="row categorias">
-        <div class="col-3 col-md-2 col-sm-1 orange">
+        <div class="col-12 col-md-6 col-lg-4 orange">
             <img src="imagenes/bocatas-home.jpg" class="img-top" alt="">
             <div class="card-body">
                 <p class="card-text">Bocadillos</p>
             </div>
         </div>
-        <div class="col-3 col-md-2 col-sm-1 orange">
+        <div class="col-12 col-md-6 col-lg-4 orange">
             <img src="imagenes/tapas-home.jpg" class="img-top" alt="">
             <div class="card-body">
                 <p class="card-text">Tapas</p>
             </div>
         </div>
-        <div class="col-3 col-md-2 col-sm-1 orange">
+        <div class="col-12 col-md-6 col-lg-4 orange">
             <img src="imagenes/hamburguesas-home.jpg" class="img-top" alt="">
             <div class="card-body">
                 <p class="card-text">Hamburguesas</p>
             </div>
         </div>
-    </section>
-    <section class="row seccion-card">
-            <div class="col-2 col-md-1 col-sm-1 contenedor">
-                <h2 class="titulo-seccion">Ultimas noticias</h2>
-                <p class="texto-seccion">Conoce las ultimas noticias del Restaurante Ricardo Tormo</p>
-                <button type="button "class="boton-vermas">Ver más</button>
-            </div>
-            <div class="col-2 col-md-1 col-sm-1 div-img-noticias">
-                <img src="imagenes/ultimas-noticias.jpg" class="card-img imgnoticias" alt="">
-            </div>
-    </section>
-    <section class="row section-noticias">
-        <div class="col-4 col-md-2 col-sm-1 noticia">
+</section>
+</div>
+<section class="container-fluid">
+    <div class="row d-flex justify-content-center seccion-home">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-home-texto">
+            <h2>Últimas noticias</h2>
+            <p>Conoce las ultimas noticias del Restaurante Ricardo Tormo</p>
+            <button>Ver más</button>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-home-img">
+            <img src="imagenes/ultimas-noticias.jpg" alt="Imagen de la categoria de bocadillos">
+        </div>
+    </div>
+</section>
+<div class="container-fluid">
+<section class="row d-flex justify-content-center section-noticias">
+        <div class="col-12 col-md-6 col-lg-3 noticia">
             <img src="imagenes/noticia1.jpg" class="img-noticia" alt="">
             <div class="div-texto-noticia">
                 <h3 class="titulo-noticia">Oferta de buffet libre desde el 3 al 9 de Octubre</h3>
@@ -37,7 +42,7 @@
                 <p class="keywords-noticia">carta, Ricardo Tormo, ValenciaGP</p>
             </div>
         </div>
-        <div class="col-4 col-md-2 col-sm-1 noticia">
+        <div class="col-12 col-md-6 col-lg-3 noticia">
             <img src="imagenes/noticia2.jpg" class="img-noticia" alt="">
             <div class="div-texto-noticia">
                 <h3 class="titulo-noticia">El Restaurant acoge el festival de MotoGP España 2023</h3>
@@ -45,7 +50,7 @@
                 <p class="keywords-noticia">carta, Ricardo Tormo, ValenciaGP</p>
             </div>
         </div>
-        <div class="col-4 col-md-2 col-sm-1 noticia">
+        <div class="col-12 col-md-6 col-lg-3 noticia">
             <img src="imagenes/noticia3.jpg" class="img-noticia" alt="">
             <div class="div-texto-noticia">
                 <h3 class="titulo-noticia">El Restaurant arrasa en los premios Gastronómicos de la Comunitat Valenciana</h3>
@@ -53,7 +58,7 @@
                 <p class="keywords-noticia">carta, Ricardo Tormo, ValenciaGP</p>
             </div>
         </div>
-        <div class="col-4 col-md-2 col-sm-1 noticia">
+        <div class="col-12 col-md-6 col-lg-3 noticia">
             <img src="imagenes/noticia4.jpg" class="img-noticia" alt="">
             <div class="div-texto-noticia">
                 <h3 class="titulo-noticia">El Restaurant anuncia nueva seccion de tapas para 2024</h3>
@@ -62,35 +67,42 @@
             </div>
         </div>
     </section>
-    <section class="row section-descubre">
-        <div class="col-2 col-md-1 col-sm-1 contenido-descubre">
-            <h2 class="titulo-descubre">Descubre el Restaurant Ricardo Tormo</h2>
-            <button type="button" class="boton-descubre">Conoce el Restaurant</button>
+</div>
+   
+<section class="row section-descubre">
+        <div class="col-12 col-md-6 col-lg-3 contenido-descubre">
+                <h2 class="titulo-descubre">Descubre el Restaurant Ricardo Tormo</h2>
+                <button type="button" class="boton-descubre">Conoce el Restaurant</button>
         </div>
-        <div class="col-2 col-md-1 col-sm-1">
-            <iframe width="672" height="378" src="">
-            </iframe>
+        <div class="col-12 col-md-12 col-lg-3 descubre-video">
         </div>
-    </section>
-    <section class="seccion-card">
-        <div class="contenedor">
-            <h2 class="titulo-seccion">Contacto</h2>
-            <p class="texto-seccion">Contacta con nosotros a través de atención telefónica o correo electrónico.</p>
-            <button type="button "class="boton-vermas">Ver más</button>
+</section>
+<section class="container-fluid">
+    <div class="row d-flex justify-content-center seccion-home">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-home-texto">
+            <h2>Contacto</h2>
+            <p>Contacta con nosotros a través de atención telefónica o correo electrónico.</p>
+            <button>Ver más</button>
         </div>
-        <img src="imagenes/ultimas-noticias.jpg" class="card-img imgnoticias" alt="">
-    </section>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-home-img">
+            <img src="imagenes/ultimas-noticias.jpg" alt="Imagen de la categoria de bocadillos">
+        </div>
+    </div>
+</section>
+<div class="container-fluid">
     <section class="row seccion-info">
-        <div class="col-4 col-md-6 col-sm-12 contenedor-info">
+        <div class="col-12 col-md-4 col-sm-3 contenedor-info">
             <h3 class="titulo-info">Localización</h3>
             <p class="texto-info">Autovía A3 Valencia-Madrid, Salida 334. 46380<br><strong>Cheste (Valencia) – España</strong></p>
         </div>
-        <div class="col-4 col-md-6 col-sm-12 contenedor-info">
+        <div class="col-12 col-md-4 col-sm-3 contenedor-info">
             <h3 class="titulo-info">Horarios</h3>
             <p class="texto-info"><strong>Atención telefónica:</strong><br> de lunes a viernes de 08:00 a 15:00 horas</p>
         </div>
-        <div class="col-4 col-md-6 col-sm-12 contenedor-info">
+        <div class="col-12 col-md-4 col-sm-3 contenedor-info">
             <h3 class="titulo-info">Contacto</h3>
             <p class="texto-info"><strong>Teléfono:</strong> 96 252 52 20<br><strong>Correo:</strong> contacto@circuitricardotormo.com</p>
         </div>
-</section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+

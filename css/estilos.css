@@ -1,4 +1,6 @@
-body {
+
+
+body .container-fluid {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,14 +17,13 @@ body {
     justify-content: space-evenly;
     margin: 40px 0px 40px 0px;
     width: 100%;   
-
 }
 
 .orange {
     background-color: #FF7900;
     width: 353px;
     height: 265px;
-    border-radius: 5px;
+    border-radius: 4px;
     border: 3px solid #FF7900;
     padding-left: 0px;
     padding-right: 0px;
@@ -30,7 +31,7 @@ body {
 
 .img-top {
     height: 224px;
-    width: 348px;
+    width: 100%;
 }
 
 
@@ -45,16 +46,64 @@ body {
     line-height: 39px;
     height: 39px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
+    padding: 2px 0px 2px 0px;
 }
 
-.seccion-card {
+.seccion-home {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.div-home-texto {
+    padding: 0px;
     display: flex;
-    width: 1371px;
-    margin: 40px 0px 40px 0px;
-    border-radius: 1px;
-    border: 2px solid #d9d9d9;
+    flex-direction: column;
+    height: 171.4px;
+    text-align: left;
+    padding: 10px 30px 20px 30px;
+}
+
+.div-home-texto h2 {
+    margin: 0px;
+    font-size: 35px;
+    font-weight: 500;
+    color: #ff7900;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 20px;
+}
+
+.div-home-texto p {
+    margin-bottom: 20px;
+    font-size: 14.4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.div-home-texto button {
+    background-color: #ff7900;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px 20px 10px 20px;
+    max-width: 113px;
+
+}
+
+.div-home-img {
+    padding: 0px;
+    overflow: hidden;
+}
+
+.div-home-img img {
+    width: 100%;
+    height: 171.4px;
 }
 
 .div-img-noticias{
@@ -98,11 +147,11 @@ body {
 .noticia{
     height: 507px;
     width: 327px;
-    border: 2px solid #d9d9d9;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;    
     border-radius: 5px;
     padding-left: 0px;
     padding-right: 0px;
-    margin: 20px 10px 20px 10px;
+    margin: 20px 16px 20px 16px;
 }
 
 .img-noticia {
@@ -113,6 +162,7 @@ body {
 
 .div-texto-noticia {
     padding: 5px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .titulo-noticia {
@@ -120,6 +170,7 @@ body {
     font-weight: 700;
     width: 282px;
     margin: 20px 10px 20px 10px;
+    font-family: 'Montserrat', sans-serif;
     
 }
 
@@ -132,7 +183,7 @@ body {
 }
 
 .keywords-noticia {
-    font-size: 14px;
+    font-size: 14.4px;
     color: #007BFF; 
     width: 282px;
     margin: 30px 10px 20px 10px;
@@ -147,15 +198,18 @@ body {
     margin: 30px 0px 30px 0px;
     display: flex;
     align-items: center;
+}
 
+.section-descubre .container-fluid {
+    padding: 0;
 }
 
 .contenido-descubre{
-    margin: 0px 70px 0px 30px; 
+    padding: 0;
 }
 
 .titulo-descubre {
-    width: 594px;
+    width: 400px;
     color: #FFFFFF;
     font-size: 52px;
     font-weight: 1000;
@@ -164,13 +218,15 @@ body {
 
 .boton-descubre {
     background-color: #FF7900;
-    border-radius: 5px;
+    border-radius: 3px;
+    border: none;
     font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     color: #FFFFFF;
     padding: 8px 20px 8px 20px;
     margin-top: 10px;
 }
+
 
 .seccion-info{
     display: flex;
