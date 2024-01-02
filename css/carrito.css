@@ -50,3 +50,11 @@ body {
 .td-cantidad p {
     margin: 0px 3px 0px 3px;
 }
+
+.finalizar-button {
+    background-color: #ff7900;
+    border: none;
+    height: 23px;
+    width: 23px;
+    color: white;
+}

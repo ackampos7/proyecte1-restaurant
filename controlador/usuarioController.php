@@ -40,6 +40,18 @@
             session_destroy();
             header("Location:".URL."?controller=home"); 
         }
+
+        public static function modificarusuario() {
+            $nombre = $_POST['nombre'];
+            $apellidos = $_POST['apellidos'];
+            $contraseña = $_POST['contraseña'];
+            $email = $_POST['email'];
+            $id = $_POST['id'];
+            usuarioDAO::modificarUsuario($nombre, $apellidos, $contraseña, $email, $id);
+            $usuario = usuarioDAO::getUsuario($id);
+            $_SESSION['usuario'] = $usuario;
+            header("Location:".URL."?controller=micuenta&action=infocuenta");             
+        }
     }
 
 

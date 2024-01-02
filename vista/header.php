@@ -15,7 +15,8 @@
     <link href="css/headerfooter.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="css/carta.css" rel="stylesheet">
-    <link href="css/micuenta..css" rel="stylesheet">
+    <link href="css/micuenta.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
@@ -26,8 +27,8 @@
 <body>
 
 <header class="container-fluid">
-    <div class="header">
-    <div class="header-general">
+    <div class="row header">
+    <div class="col-12 col-md-12 col-lg-6 header-general">
         <img src="imagenes/logo.jpg"></img>
         <nav class="navheader">
             <ul>
@@ -37,18 +38,20 @@
             </ul>
         </nav>
     </div>
-    <div class="header-session">
-        <nav class="navbar">
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
-        </nav>
+    <div class="col-12 col-md-12 col-lg-6 header-session">
         <ul>
+            <li>
+                <nav class="navbar">
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </nav>
+            </li>
         <?php if(isset($_SESSION['usuario'])) {    ?>
             <li><a href="?controller=micuenta">Mi cuenta</a></li>
         <?php }else { ?>
-            <li><a href="?controller=usuario&action=iniciarsesion">Iniciar sesión</a></li>
+            <li><a href="?controller=usuario">Iniciar sesión</a></li>
         <?php } ?>
         </ul>
     </div>

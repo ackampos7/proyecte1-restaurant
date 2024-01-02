@@ -1,3 +1,30 @@
+.mi-cuenta {
+    color: #ff7900;
+}
+
+.panel-control {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.listado-admin {
+    display: flex;
+    flex-direction: column;
+}
+
+.listado-admin a {
+    padding: 10px 0px 10px 0px;
+}
+
+.añadirproducto {
+    color: white;
+    background-color: #ff7900;
+    border: none;
+    border-radius: 2px;
+    padding: 8px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -34,3 +61,23 @@ th{
 .table-admin-productos {
     margin: 70px 0px 70px 0px;
 }
+
+.pestañas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pestañas a {
+    margin: 20px 10px 20px 10px;
+}
+
+
+.seccion-pestaña li {
+    padding: 15px;
+    background-color: #ff7900;
+    color: white;
+    border-radius: 3px;
+
+}
+

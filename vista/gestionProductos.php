@@ -1,8 +1,27 @@
-<?php if(get_class($_SESSION['usuario']) == "Administrador") { ?>
+<div class="container-fluid">
+    <h1 class="mi-cuenta">Mi cuenta</h1>
+    <div class="micuenta-menu">
+        <ul class="pestañas">
+            <a class="seccion-pestaña" href="?controller=micuenta">
+                <li>Panel de control</li>
+            </a>
+            <a class="seccion-pestaña" href="?controller=micuenta&action=infocuenta">
+                <li>Información de la cuenta</li>
+            </a>            
+            <a class="seccion-pestaña" href="?controller=micuenta&action=panelcontrol">
+                <li>Mis pedidos</li>
+            </a>
+            <a class="seccion-pestaña" href="?controller=usuario&action=cerrarSesion">
+                <li>Cerrar sesión</li>
+            </a>
+        </ul>
+    </div>
+</div>
 
 <section class="overflow-x:auto container-fluid">
+    <h1>PRODUCTOS</h1>
     <form action="<?= URL ?>?controller=micuenta&action=añadirVista" method="post">
-        <input type="submit" name="añadir" value="Añadir producto">
+        <input class="añadirproducto" type="submit" name="añadir" value="Añadir producto">
     </form>
     <table class="table-admin-productos">
     <tr class="table-header">
@@ -19,7 +38,7 @@
         <td><?= $producto->getPrecioUnidad() ?>€</td>
         <td><?= $producto->getCategoriaId() ?></td>
         <td class="action">
-        <form class="modificar-eliminar" action="<?= URL ?>?controller=micuenta&action=gestionProducto" method="post">
+        <form class="modificar-eliminar" action="<?= URL ?>?controller=micuenta&action=adminProducto" method="post">
             <input type="hidden" name="idescondido" value="<?= $producto->getProductoId() ?>">
             <input type="submit" name="modificar" value="Modificar">
             <input type="submit" name="eliminar" value="Eliminar">
@@ -31,11 +50,3 @@
     ?>
     </table>
 </section>
-<?php } else { 
-?>
-    <div>
-        <p><?= $_COOKIE['ultimopedido'] ?></p>
-    </div>  
-
-<?php }  ?>
-
