@@ -9,6 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    margin-bottom: 0px;
+    margin-right: 10px;
 }
 
 .header-session ul {
@@ -20,6 +32,7 @@
 .navheader ul {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -44,6 +57,7 @@ a {
 
 
 footer{
+    margin-top: 100px;
     border-top: solid 1px;
     border-color: #FF7900;
     width: 100%;

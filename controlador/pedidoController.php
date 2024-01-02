@@ -2,6 +2,7 @@
 
     include_once 'modelo/pedidoDAO.php';
     include_once 'config/functions.php';
+    include_once 'modelo/calcularPrecioTotal.php';
 
 
     class pedidoController {
@@ -9,7 +10,10 @@
             if(!isset($_GET['controller'])) {
                 include_once 'vista/home.php';
             } else {
-                include_once 'vista/header.php';
+
+                if(!isset($preciototal)) {
+                    $preciototal = 0;
+                }
                 include_once 'vista/carrito.php';
             }
         }

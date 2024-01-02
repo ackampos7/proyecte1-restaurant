@@ -9,10 +9,22 @@ body {
 }
 
 .table-carrito {
-    width: 1277px;
+    width: 100%;
     border: none;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+.carrito-vacio {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
 .table-header{
