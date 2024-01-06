@@ -70,11 +70,12 @@
 </div>
    
 <section class="row section-descubre">
-        <div class="col-12 col-md-6 col-lg-3 contenido-descubre">
+        <div class="col-12 col-md-6 col-lg-6 contenido-descubre">
                 <h2 class="titulo-descubre">Descubre el Restaurant Ricardo Tormo</h2>
                 <button type="button" class="boton-descubre">Conoce el Restaurant</button>
         </div>
-        <div class="col-12 col-md-12 col-lg-3 descubre-video">
+        <div class="col-12 col-md-12 col-lg-6 descubre-video">
+            <iframe width="817" height="460" src="https://www.youtube.com/embed/xPPLbEFbCAo?si=719FqKRXnUk1_MeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 </section>
 <section class="container-fluid">
@@ -103,6 +104,7 @@
             <h3 class="titulo-info">Contacto</h3>
             <p class="texto-info"><strong>Teléfono:</strong> 96 252 52 20<br><strong>Correo:</strong> contacto@circuitricardotormo.com</p>
         </div>
+    </section>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 

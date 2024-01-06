@@ -26,35 +26,36 @@
     <title>Restaurant Ricardo Tormo</title>
 </head>
 <body>
+<section class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light header">
+  <a class="navbar-brand" href="#"><img src="imagenes/logo.jpg"></img></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<header class="container-fluid">
-<div class="row header">
-    <div class="col-12 col-md-12 col-lg-6 header-general">
-        <nav class="navheader">
-            <ul>
-                <li><img src="imagenes/logo.jpg"></img></li>
-                <li><a href="?controller=home">Inicio</a></li>
-                <li><a href="?controller=producto">Carta</a></li>
-                <li><a href="?controller=pedido">Carrito</a></li>
-                <?php if(isset($_SESSION['usuario'])) {    ?>
-                    <li><a href="?controller=micuenta">Mi cuenta</a></li>
-                <?php }else { ?>
-                    <li><a href="?controller=usuario">Iniciar sesión</a></li>
-                <?php } ?>
-                <li>
-                <nav class="navbar">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                    </form>
-                </nav>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    </div>
-    </div>
-    
-</header>    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="?controller=home">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?controller=producto">Carta</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?controller=pedido">Carrito</a>
+      </li>
+      <?php if(isset($_SESSION['usuario'])) {    ?>
+            <li class="nav-item"><a class="nav-link" href="?controller=micuenta">Mi cuenta</a></li>
+        <?php }else { ?>
+            <li class="nav-item"><a class="nav-link" href="?controller=usuario">Iniciar sesión</a></li>
+    <?php } ?>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+  </div>
+</nav>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -11,9 +11,6 @@
                 $bocadillos = productoDAO::getProductByType(1);
                 $tapas = productoDAO::getProductByType(2);
                 $hamburguesas = productoDAO::getProductByType(3);
-                //var_dump($bocadillos);
-                //var_dump($tapas);
-                //var_dump($hamburguesas);
                 include_once 'vista/carta.php';
             }
         }

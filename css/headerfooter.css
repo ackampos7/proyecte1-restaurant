@@ -1,21 +1,23 @@
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
-}
-
-.header-general {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    background-color: white;
 }
 
 .form-inline {
     display: flex;
-    justify-content: center;
-    align-items: center;
+
+}
+
+.navbar-light {
+    background-color: transparent !important;
+}
+
+.navbar-collapse {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .form-control{
@@ -35,6 +37,9 @@
     align-items: center;
 }
 
+.nav-item {
+    color: black;
+}
 
 
 ul {

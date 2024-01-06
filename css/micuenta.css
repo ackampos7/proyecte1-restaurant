@@ -2,6 +2,10 @@
     color: #ff7900;
 }
 
+.div-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
 .panel-control {
     display: flex;
     justify-content: center;
@@ -30,9 +34,10 @@ table {
     border-collapse: collapse;
 }
 
-table, th, td {
+.table-admin-productos {
     border: 1px solid black;
 }
+
 
 td form {
     max-width: 200px;
@@ -40,6 +45,7 @@ td form {
 
 .action {
     width: 170px;
+    align-items: center;
 }
 
 th, td {

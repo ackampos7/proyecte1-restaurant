@@ -92,6 +92,8 @@
 .div-producto-detalles {
     padding-top: 30px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    align-items: center;
 }
 
 .div-producto-detalles h3 {
@@ -99,13 +101,14 @@
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
     padding: 0px 20px 0px 20px;
-    width: 100%;
+    width: 80%;
     height: 84px;
 }
 
 .div-producto-detalles p {
     padding-left: 20px;
     margin-bottom: 0px;
+    font-weight: 700;
 }
 
 .boton-añadir {

@@ -195,9 +195,10 @@ body .container-fluid {
     background-size: cover;
     width: 100%;
     height: 819px;
-    margin: 30px 0px 30px 0px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
 
 .section-descubre .container-fluid {
@@ -206,6 +207,7 @@ body .container-fluid {
 
 .contenido-descubre{
     padding: 0;
+    width: 250px;
 }
 
 .titulo-descubre {
@@ -227,18 +229,23 @@ body .container-fluid {
     margin-top: 10px;
 }
 
+.descubre-video{
+    display: flex;
+    justify-content: center;
+}
+
+.seccion-home {
+    margin-top: 100px;
+}
+
 
 .seccion-info{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    padding: 0px 0px 100px 0px;
+    margin-top: 20px;
 }
 
-.contenedor-info {
-    width: 366px;
-    height: 61px;
-}
 
 .titulo-info {
     font-family: 'Montserrat', sans-serif;

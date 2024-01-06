@@ -15,7 +15,7 @@
             <h2>La carta</h2>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-presentacion-img">
-            <img src="imagenes/categorias/categoriacarta.png" alt="Imagen de la categoria de bocadillos">
+            <img src="imagenes/categorias/categoriacarta.png" alt="Imagen de la categoria de bocadillos">   
         </div>
     </div>
 </section>

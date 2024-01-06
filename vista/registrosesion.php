@@ -1,6 +1,6 @@
 <div>
     <h2>Crear una cuenta</h2>
-    <p><a href="iniciosesion.php">Ya tienes una cuenta? Inicia sesión aquí</a></p>
+    <p><a href="<?= URL ?>?controller=usuario">Ya tienes una cuenta? Inicia sesión aquí</a></p>
     <form action="<?= URL ?>?controller=usuario&action=createNewUser" method="post">
         <input type="text" name="nombre" placeholder="Nombre">
         <br>

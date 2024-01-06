@@ -8,12 +8,33 @@ body {
     justify-content: center;
 }
 
-.table-carrito {
+.mi-carrito {
+    color:#ff7900;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.div-carrito {
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.div-carrito-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.table-carrito {
+    width: 90%;
     border: none;
+    border-collapse: collapse;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin: 20px;
+}
 
+.table-carrito td {
+    width: 30px;
 }
 
 .carrito-vacio {
@@ -46,27 +67,44 @@ body {
     width: 212.83px;
 }
 
-.td-cantidad {
+.cantidad-row form {
     display: flex;
-    justify-content:  center;
+    justify-content: center;
+    gap: 8px;
 }
 
-.td-cantidad input {
+.button-cantidad {
     background-color: #ff7900;
-    border: none;
-    height: 23px;
-    width: 23px;
     color: white;
+    border: none;
 }
 
-.td-cantidad p {
-    margin: 0px 3px 0px 3px;
+.button-eliminar {
+    background-color: #ff7900;
+    color: white;
+    border: none;
+}
+
+.preciototal {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-precio {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 65px;
+    gap: 20px;
 }
 
 .finalizar-button {
     background-color: #ff7900;
     border: none;
-    height: 23px;
-    width: 23px;
     color: white;
+    padding: 10px;
+    border-radius: 3px;
 }
