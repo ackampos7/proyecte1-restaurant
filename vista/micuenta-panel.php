@@ -2,18 +2,18 @@
     <h1 class="mi-cuenta">Mi cuenta</h1>
     <div class="micuenta-menu">
         <ul class="row pestañas">
-            <a class="col-12 col-md-12 col-lg-4 seccion-pestaña" href="?controller=micuenta">
+            <a class="col-12 col-sm-12 col-md-6 col-lg-4 seccion-pestaña" href="?controller=micuenta">
                 <li>Panel de control</li>
             </a>
-            <a class="col-12 col-md-12 col-lg-4 seccion-pestaña" href="?controller=micuenta&action=infocuenta">
+            <a class="col-12 col-sm-12 col-md-6 col-lg-4 seccion-pestaña" href="?controller=micuenta&action=infocuenta">
                 <li>Información de la cuenta</li>
             </a>            
-            <a class="col-12 col-md-12 col-lg-4 seccion-pestaña" href="?controller=usuario&action=cerrarSesion">
+            <a class="col-12 col-sm-12 col-md-6 col-lg-4 seccion-pestaña" href="?controller=usuario&action=cerrarSesion">
                 <li>Cerrar sesión</li>
             </a>
         </ul>
     </div>
-    <h2>Panel de control</h2>
+<h2 class="titulo-admin-seccion">Panel de control</h2>
     <div class="row panel-control">    
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 info-cuenta">
                 <h3>Información de la cuenta</h3>
@@ -32,11 +32,9 @@
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 listado-admin">
                 <h3>Gestor de administrador</h3>
                 <a href="?controller=micuenta&action=gestionProductos">Listado de productos</a>
-                <a href="?controller=micuenta&action=gestionPedidos">Listado de pedidos</a>
                 <a href="?controller=micuenta&action=gestionUsuarios">Listado de usuarios</a>
             </div>
             <?php } ?>
     </div>
-</div>
 </div>
 

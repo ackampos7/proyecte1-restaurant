@@ -46,18 +46,17 @@
             ?>
     </table>
     </div>
-    <div class="container-precio">
-        <div class="preciototal">
+    <div class="row container-precio">
+        <div class="col-12 col-md-6 col-lg-6 preciototal">
             <p><strong>Precio Total:</strong> <?= $preciototal ?>€</p>
         </div>
-        <div>
+        <div class="col-12 col-md-12 col-lg-6 finalizar">
         <form action="<?= URL ?>?controller=pedido&action=finalizarPedido" method="post">
             <input type="hidden" name="preciototal" value="<?= $preciototal ?>">
             <input class="finalizar-button" type="submit" name="finalizarpedido" value="Finalizar pedido">
         </form>
+        </div>
     </div>
-    </div>
-
 </div>    
 
 </section>
@@ -68,7 +67,7 @@
 ?>
 
 <div class="carrito-vacio">
-    <h2>EL CARRITO ESTÁ VACÍO.</h2>
+    <h2 class="h2-vacio">EL CARRITO ESTÁ VACÍO.</h2>
     <p>INICIA SESIÓN O AÑADE UN PRODUCTO AL CARRITO PARA VER LOS DETALLES</p>
 </div>
 

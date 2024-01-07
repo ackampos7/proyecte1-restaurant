@@ -8,11 +8,7 @@ include_once 'modelo/Usuario.php';
         }
 
         public function verifyCredentials() {
-                if($this->rol == "Administrador") {
-                        return true;
-                } else if($this->rol == "Cliente") {
-                        return false;
-                }
+                return true;
         }
 
     }

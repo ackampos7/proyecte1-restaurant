@@ -1,25 +1,21 @@
-<div class="container-fluid">
+<div class="container-fluid div-shadow">
     <h1 class="mi-cuenta">Mi cuenta</h1>
     <div class="micuenta-menu">
-        <ul class="pestañas">
-            <a class="seccion-pestaña" href="?controller=micuenta">
+        <ul class="row pestañas">
+            <a class="col-12 col-sm-12 col-md-6 col-lg-4 seccion-pestaña" href="?controller=micuenta">
                 <li>Panel de control</li>
             </a>
-            <a class="seccion-pestaña" href="?controller=micuenta&action=infocuenta">
+            <a class="col-12 col-sm-12 col-md-6 col-lg-4 seccion-pestaña" href="?controller=micuenta&action=infocuenta">
                 <li>Información de la cuenta</li>
             </a>            
-            <a class="seccion-pestaña" href="?controller=micuenta&action=panelcontrol">
-                <li>Mis pedidos</li>
-            </a>
-            <a class="seccion-pestaña" href="?controller=usuario&action=cerrarSesion">
+            <a class="col-12 col-sm-12 col-md-6 col-lg-4 seccion-pestaña" href="?controller=usuario&action=cerrarSesion">
                 <li>Cerrar sesión</li>
             </a>
         </ul>
     </div>
-</div>
 
 <section class="overflow-x:auto container-fluid">
-    <h1>PRODUCTOS</h1>
+    <h1 class="titulo-admin-seccion">PRODUCTOS</h1>
     <form action="<?= URL ?>?controller=micuenta&action=añadirVista" method="post">
         <input class="añadirproducto" type="submit" name="añadir" value="Añadir producto">
     </form>
@@ -50,3 +46,4 @@
     ?>
     </table>
 </section>
+</div>

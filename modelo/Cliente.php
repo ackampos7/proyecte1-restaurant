@@ -12,6 +12,10 @@ include_once 'modelo/Usuario.php';
                 $preciototal = $_COOKIE['ultimopedido_'.$this->usuario_id];
                 return $preciototal;
         }
+
+        public function verifyCredentials() {
+            return false;
+        }
        
     }
 

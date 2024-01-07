@@ -20,6 +20,25 @@
     padding: 0;
 }
 
+.button-search {
+    color: #FF7900;
+    border-color: #FF7900;
+}
+
+.nav-link:hover{
+    color:#FF7900;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-header li {
+    width: auto;
+}
+
 .form-control{
     margin-bottom: 0px;
     margin-right: 10px;

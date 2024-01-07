@@ -26,36 +26,41 @@
     <title>Restaurant Ricardo Tormo</title>
 </head>
 <body>
-<section class="container-fluid">
-<nav class="navbar navbar-expand-lg navbar-light bg-light header">
-  <a class="navbar-brand" href="#"><img src="imagenes/logo.jpg"></img></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="?controller=home">Inicio</a>
+<section class="container-fluid header">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div id="navbarSupportedContent">
+    <ul class="row navbar-nav mr-auto nav-header">
+      <li class="col-12 col-md-6 col-lg-2">
+        <a class="navbar-brand" href="?controller=home"><img src="imagenes/logo.jpg"></img></a>
       </li>
-      <li class="nav-item">
+      <li id="navbarSupportedContent" class="col-12 col-md-6 col-lg-2 nav-item">
+        <a  class="nav-link" href="?controller=home">Inicio</a>
+      </li>
+      <li class="col-12 col-md-6 col-lg-2 nav-item">
         <a class="nav-link" href="?controller=producto">Carta</a>
       </li>
-      <li class="nav-item">
+      <li class="col-12 col-md-6 col-lg-2 nav-item">
         <a class="nav-link" href="?controller=pedido">Carrito</a>
       </li>
       <?php if(isset($_SESSION['usuario'])) {    ?>
-            <li class="nav-item"><a class="nav-link" href="?controller=micuenta">Mi cuenta</a></li>
+            <li class="col-12 col-md-6 col-lg-2 nav-item"><a class="nav-link" href="?controller=micuenta">Mi cuenta</a></li>
         <?php }else { ?>
-            <li class="nav-item"><a class="nav-link" href="?controller=usuario">Iniciar sesión</a></li>
+            <li class="col-12 col-md-6 col-lg-2 nav-item"><a class="nav-link" href="?controller=usuario">Iniciar sesión</a></li>
     <?php } ?>
+        <li class="col-12 col-md-6 col-lg-2">    
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 button-search" type="submit">Buscar</button>
+          </form>
+        </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-    </form>
+
   </div>
 </nav>
 </section>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+

@@ -7,15 +7,21 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;    
     padding: 20px;
     border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: 40px 0px 40px 0px;
 }
 
 .forms form {
-    display: table;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    font-weight: 700;
+}
+
+.form-admin {
+    width: 200px;
 }
 
 form input {
@@ -23,7 +29,7 @@ form input {
 }
 
 .button-submit{
-    border-radius: 2px;
+    border-radius: 4px;
     color: white;
     border: none;
     padding: 5px;

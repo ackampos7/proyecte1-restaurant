@@ -1,22 +1,29 @@
 <div class="container-fluid">
 <section class="row categorias">
         <div class="col-12 col-md-6 col-lg-4 orange">
-            <img src="imagenes/bocatas-home.jpg" class="img-top" alt="">
-            <div class="card-body">
-                <p class="card-text">Bocadillos</p>
-            </div>
+            <a href="?controller=producto">
+                <img src="imagenes/bocatas-home.jpg" class="img-top" alt="">
+                <div class="card-body">
+                    <p class="card-text">Bocadillos</p>
+                </div>
+            </a>
+
         </div>
         <div class="col-12 col-md-6 col-lg-4 orange">
-            <img src="imagenes/tapas-home.jpg" class="img-top" alt="">
-            <div class="card-body">
-                <p class="card-text">Tapas</p>
-            </div>
+            <a href="?controller=producto">
+                <img src="imagenes/tapas-home.jpg" class="img-top" alt="">
+                <div class="card-body">
+                    <p class="card-text">Tapas</p>
+                </div>
+            </a>
         </div>
         <div class="col-12 col-md-6 col-lg-4 orange">
-            <img src="imagenes/hamburguesas-home.jpg" class="img-top" alt="">
-            <div class="card-body">
-                <p class="card-text">Hamburguesas</p>
-            </div>
+            <a href="?controller=producto">
+                <img src="imagenes/hamburguesas-home.jpg" class="img-top" alt="">
+                <div class="card-body">
+                    <p class="card-text">Hamburguesas</p>
+                </div>
+            </a>
         </div>
 </section>
 </div>
