@@ -8,7 +8,7 @@
 
     class productoDAO {
         public static function getAllProducts() {
-
+            //Obtiene todos los productos de la base de datos y los devuelve en forma de array
             $con = dataBase::connect();
 
             if($result = $con->query("SELECT * FROM productos;")) {
@@ -21,6 +21,8 @@
         }
 
         public static function getProductById($id) {
+
+            //Obtiene el producto de la base de datos con la id recibida
             $con = database::connect();
             $result = $con->query("SELECT * FROM PRODUCTOS WHERE producto_id = $id;");
             $productoCarro = $result->fetch_object('Producto');
@@ -28,6 +30,8 @@
         }
 
         public static function getProductByType($tipo) {
+
+            //Obtiene todos los productos de la categoria recibida
             $con = database::connect();
             $stmt = $con->prepare("SELECT * FROM PRODUCTOS WHERE categoria_id=?");
             $stmt->bind_param("i", $tipo);
@@ -53,16 +57,19 @@
         }
 
         public static function añadirProducto($nombre, $precio, $categoria){
+            //Inserta un nuevo producto en la base de datos
             $con = database::connect();
             $result = $con->query("INSERT INTO PRODUCTOS (nombre_producto, precio_unidad, categoria_id) VALUES ('$nombre', '$precio', '$categoria');");
         }
 
         public static function modificarProducto($nombre, $precio, $categoria, $id) {
+            //Modifica un producto existente de la base de datos
             $con = database::connect();
             $result = $con->query("UPDATE PRODUCTOS SET nombre_producto = '$nombre', precio_unidad = '$precio', categoria_id = '$categoria' WHERE producto_id = '$id';");
         }
 
         public static function eliminarProducto($id){
+            //Elimina un producto de la base de datos con la id recibida
             $con = database::connect();
             $result = $con->query("DELETE FROM PRODUCTOS WHERE producto_id = '$id'");
         }

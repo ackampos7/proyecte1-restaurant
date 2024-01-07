@@ -7,6 +7,7 @@
 
     class pedidoController {
         public static function index() {
+            //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
                 include_once 'vista/home.php';
             } else {
@@ -29,7 +30,7 @@
         }
 
         public static function sumarCantidad($idcantidad) {
-
+            //Suma la cantidad de un producto especifico en el carrito
             for($i = 0; $i < count($_SESSION['pedido']); $i++) {
                 if($_SESSION['pedido'][$i][0] == $idcantidad) {
                     $_SESSION['pedido'][$i][1]++;
@@ -40,7 +41,7 @@
         }
 
         public static function restarCantidad($idcantidad) {
-
+            //Resta la cantidad de un producto especifico en el carrito
             for($i = 0; $i < count($_SESSION['pedido']); $i++) {
                 if($_SESSION['pedido'][$i][0] == $idcantidad) {
                     if($_SESSION['pedido'][$i][1] <= 1) {
@@ -56,7 +57,7 @@
         }
 
         public static function borrarProductoCarrito() {
-
+            //Elimina el producto del carrito
             $idborrar = $_POST['idescondido'];
             for($i = 0; $i < count($_SESSION['pedido']); $i++) {
                 if($_SESSION['pedido'][$i][0] == $idborrar) {
@@ -69,6 +70,7 @@
         }
 
         public static function finalizarPedido(){
+            //Finaliza el pedido y lo guarda en la base de datos
             $preciototal = $_POST['preciototal'];
             setcookie("ultimopedido_".$_SESSION['usuario']->getUsuarioid(), $preciototal);
             pedidoDAO::finalizarPedido();

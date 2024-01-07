@@ -6,6 +6,7 @@
     class pedidoDAO {
 
         public static function finalizarPedido()  {
+            //Guarda los detalles del pedido en la base de datos, tanto en pedidos como en pedido-productos
             $con = database::connect();
             $usuarioid = $_SESSION['usuario']->getUsuarioid();
             $date = date('Y-m-d.H:i:s');

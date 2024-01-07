@@ -15,7 +15,7 @@
             <h2>La carta</h2>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-presentacion-img">
-            <img src="imagenes/categorias/categoriacarta.png" alt="Imagen de la categoria de bocadillos">   
+            <img src="imagenes/categorias/categoriacarta.png" alt="Imagen de la seccion de la carta">   
         </div>
     </div>
 </section>
@@ -61,7 +61,7 @@
             <h2>Tapas</h2>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-categoria-img">
-            <img src="imagenes/categorias/tapas.png" alt="Imagen de producto">
+            <img src="imagenes/categorias/tapas.png" alt="Imagen de la categoria de tapas">
         </div>
     </div>
 </section>
@@ -96,7 +96,7 @@
             <h2>Hamburguesas</h2>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 div-categoria-img">
-            <img src="imagenes/categorias/hamburguesas.png" alt="Imagen de la categoria de bocadillos">
+            <img src="imagenes/categorias/hamburguesas.png" alt="Imagen de la categoria de hamburguesas">
         </div>
     </div>
 </section>
@@ -108,7 +108,7 @@
     ?>
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 div-producto">
             <div class="div-producto-img">
-                <img src=" <?php echo $hamburguesa->getImg() ?>" alt="Imagen de bocadillo vegetal">
+                <img src=" <?php echo $hamburguesa->getImg() ?>" alt="Imagen de producto">
             </div>
             <div class="div-producto-detalles">
                 <h3><?= $hamburguesa->getNombre() ?></h3>

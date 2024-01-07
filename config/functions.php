@@ -2,6 +2,8 @@
     include_once 'modelo/Administrador.php';
     include_once 'modelo/Cliente.php';
 
+//Se encarga de iniciar la sesión e inicializar el carrito.
+
 session_start();
 
 

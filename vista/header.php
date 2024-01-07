@@ -32,7 +32,7 @@
   <div id="navbarSupportedContent">
     <ul class="row navbar-nav mr-auto nav-header">
       <li class="col-12 col-md-6 col-lg-2">
-        <a class="navbar-brand" href="?controller=home"><img src="imagenes/logo.jpg"></img></a>
+        <a class="navbar-brand" href="?controller=home"><img src="imagenes/logo.jpg" alt="logo de la empresa"></img></a>
       </li>
       <li id="navbarSupportedContent" class="col-12 col-md-6 col-lg-2 nav-item">
         <a  class="nav-link" href="?controller=home">Inicio</a>

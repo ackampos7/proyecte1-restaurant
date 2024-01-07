@@ -21,7 +21,7 @@
                     $preciototal = $preciototal + $precioproductototal;
             ?>
             <tr class="row-producto">
-                <td><img src="<?php echo $productoCarro->getImg() ?>" height="143" width="212.83" alt=""></td>
+                <td><img src="<?php echo $productoCarro->getImg() ?>" height="143" width="212.83" alt="Imagen del producto"></td>
                 <td><?= $productoCarro->getNombre() ?></td>
                 <td class="cantidad-row">
                     <form action="<?= URL ?>?controller=pedido&action=modificarCantidad" method="post">

@@ -5,9 +5,11 @@
     include_once 'modelo/usuarioDAO.php';
     include_once 'config/functions.php';
 
-
+    //Controlador de la vista de mi-cuenta
     class micuentaController {
         public static function index() {
+
+            //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
                 include_once 'vista/home.php';
             } else {
@@ -16,6 +18,7 @@
         }
 
         public static function infocuenta() {
+            //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
                 include_once 'vista/home.php';
             } else {
@@ -24,6 +27,8 @@
         }
 
         public static function gestionProductos() {
+
+            //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
                 include_once 'vista/home.php';
             } else {
@@ -33,6 +38,8 @@
         }
 
         public static function gestionUsuarios() {
+
+            //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
                 include_once 'vista/home.php';
             } else {
@@ -43,6 +50,8 @@
 
         public static function adminProducto(){
 
+
+            //Comprueba si se quiere eliminar o modificar el producto y asi enviar los datos a otro controlador o vista
             $id = $_POST['idescondido'];
 
             if(isset($_POST['modificar'])){
@@ -54,7 +63,7 @@
         }
 
         public static function adminUsuario(){
-
+            //Comprueba si se quiere eliminar o modificar el usuario y asi enviar los datos a otro controlador o vista
             $id = $_POST['idescondido'];
 
             if(isset($_POST['modificar'])){
@@ -66,6 +75,7 @@
         }
 
         public static function añadirVista(){
+            //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
                 include_once 'vista/home.php';
             } else {
@@ -75,6 +85,7 @@
         }
 
         public static function añadirUsuarioVista(){
+            //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
                 include_once 'vista/home.php';
             } else {
@@ -83,6 +94,7 @@
         }
 
         public static function añadirProducto(){
+            //Recoge los datos del form de la vista y los envia a ProductoDAO
             $nombre = $_POST['nombreproducto'];
             $precio = $_POST['precioproducto'];
             $categoria = $_POST['categoria'];
@@ -91,6 +103,7 @@
         }
 
         public static function añadirUsuario(){
+            //Recoge los datos del form de la vista y los envia a usuarioDAO
             $nombre = $_POST['nombreusuario'];
             $apellidos = $_POST['apellidousuario'];
             $contraseña = $_POST['contraseña'];
@@ -102,6 +115,8 @@
         }
 
         public static function modificarProducto(){
+
+            //Recoge los datos del form de la vista y los envia a ProductoDAO
             $id = $_POST['idescondido'];
             $nombre = $_POST['nombreproducto'];
             $precio = $_POST['precioproducto'];
@@ -111,6 +126,8 @@
         }
 
         public static function modificarUsuario(){
+
+            //Recoge los datos del form de la vista y los envia a usuarioDAO
             $nombre = $_POST['nombreusuario'];
             $apellidos = $_POST['apellidousuario'];
             $contraseña = $_POST['contraseña'];
@@ -123,11 +140,14 @@
         }
 
         public static function eliminar($id){
+
+            //Recoge la id del producto que se desea eliminar y lo manda a productoDAO
             productoDAO::eliminarProducto($id);
             header("Location:".URL."?controller=micuenta");
         }
 
         public static function eliminarUsuario($id){
+            //Recoge la id del producto que se desea eliminar y lo manda a productoDAO
             usuarioDAO::eliminarUsuario($id);
             header("Location:".URL."?controller=micuenta");
         }

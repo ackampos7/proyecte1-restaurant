@@ -1,4 +1,5 @@
 <?php
+    //Establece la conexión a la base de datos
     class dataBase {
         public static function connect($host='localhost', $user='root', $pwd='', $db='dbrestaurant') {
             $con = new mysqli($host, $user, $pwd, $db);

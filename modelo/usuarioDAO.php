@@ -8,11 +8,13 @@ include_once 'config/database.php';
 class usuarioDAO {
 
     public static function createNewUser($nombre, $apellidos, $contraseña, $email) {
+        //Inserta un nuevo usuario en la base de datos
         $con = database::connect();
         $result = $con->query("INSERT INTO USUARIOS (nombre, apellidos, contraseña, email, rol) VALUES ('$nombre', '$apellidos', '$contraseña', '$email', 'Cliente');");
     }
 
     public static function iniciarSesion($email, $contraseña) {
+        //Comprueba el inicio de sesion con el correo y la contraseña
         $con = database::connect();
 
         $result = $con->query("SELECT count(*) as countemail, rol FROM USUARIOS WHERE EMAIL = '$email' AND CONTRASEÑA = '$contraseña' LIMIT 1;");
@@ -33,7 +35,7 @@ class usuarioDAO {
     }
 
     public static function getUsuario($id) {
-
+        //Devuelve el usuario con la id recibida
         $con = database::connect();
 
         $result = $con->query("SELECT rol FROM USUARIOS WHERE usuario_id = '$id';");
@@ -56,6 +58,7 @@ class usuarioDAO {
 
     
     public static function getUsuarioById($id) {
+        //Devuelve el usuario con la id recibida
 
         $con = database::connect();
 
@@ -76,13 +79,14 @@ class usuarioDAO {
     }
 
     public static function modificarUsuario($nombre, $apellidos, $contraseña, $email, $id) {
+        //Modifica un usuario existente en la base de datos
         $con = database::connect();
         $result = $con->query("UPDATE USUARIOS SET nombre = '$nombre', apellidos = '$apellidos', contraseña = '$contraseña', email = '$email' WHERE usuario_id = $id");
     }
 
 
     public static function getAllUsuarios() {
-
+        //Devuelve un array de todos los usuarios de la base de datos
         $con = dataBase::connect();
 
         if($result = $con->query("SELECT * FROM usuarios;")) {
@@ -96,17 +100,20 @@ class usuarioDAO {
     }
 
     public static function añadirUsuario($nombre, $apellidos, $contraseña, $email, $rol){
+        //Inserta a un usuario en la base de datos
         $con = database::connect();
         $result = $con->query("INSERT INTO USUARIOS (nombre, apellidos, contraseña, email, rol) VALUES ('$nombre', '$apellidos', '$contraseña', '$email', '$rol');");
     }
 
     public static function modificarUsuarioAdmin($nombre, $apellidos, $contraseña, $email, $rol, $id) {
+        //Modifica un usuario de la base de datos
         $con = database::connect();
         $result = $con->query("UPDATE USUARIOS SET nombre = '$nombre', apellidos = '$apellidos', contraseña = '$contraseña', email = '$email', rol = '$rol' WHERE usuario_id = '$id';");
     }
 
     
     public static function eliminarUsuario($id){
+        //Elimina un usuario de la base de datos
         $con = database::connect();
         $result = $con->query("DELETE FROM USUARIOS WHERE usuario_id = '$id'");
     }
