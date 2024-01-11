@@ -6,6 +6,7 @@
     include_once 'controlador/productoController.php';
     include_once 'controlador/usuarioController.php';
     include_once 'controlador/homeController.php';
+    include_once 'controlador/reviewsController.php';
 
     if(!isset($_GET['controller'])) {
         header("Location:" . URL . "?controller=home");

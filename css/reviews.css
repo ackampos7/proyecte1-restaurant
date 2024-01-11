@@ -1,0 +1,77 @@
+.container-fluid {
+    max-width: 1450px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.div-intro {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.div-intro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.intro-texto{
+    width: 50%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+}
+
+.intro-imagen {
+    width: 50%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.intro-imagen img {
+    width: 100%;
+}
+
+.intro-texto h1 {
+    color: #ff7900;
+    font-weight: 700px;
+    font-size: 35px;
+    padding-bottom: 40px;
+}
+
+.intro-texto h1, .intro-texto p {
+    padding-left: 50px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.intro-texto p {
+    font-size: 14.4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.div-reviews {
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.review {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    height: auto;
+    width: 30%;
+    border-radius: 3px;
+}
