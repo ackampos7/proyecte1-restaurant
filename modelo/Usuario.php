@@ -131,6 +131,12 @@
 
                 return $this;
         }
+
+        public function getInitials() {
+                $initial = $this->nombre[0];
+                
+                return $initial;
+        }
     }
 
 ?>

@@ -6,7 +6,7 @@
 }
 
 .div-intro {
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .div-intro {
@@ -66,12 +66,55 @@
     margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap: 5%;
+    gap: 2%;
+
 }
 
 .review {
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-    height: auto;
-    width: 30%;
+    margin: 30px 0px 30px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    max-width: 32%;
     border-radius: 3px;
+    overflow: hidden;
+}
+
+.header-review {
+    padding: 15px;  
+}
+
+.perfil-review {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: grey;
+    color: white;
+    font-size: 20px;
+}
+
+.intro-review {
+    display: flex;
+    justify-content: space-between;
+}
+
+.star-img {
+    height: 35px;
+    width: 35px;
+}
+
+.fecha {
+    color: grey;
+}
+
+.info-review {
+    gap: 5px;
+}
+
+.texto-review {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: auto;
+}
+
+.texto-review h3 {
+    color: #ff7900;
 }

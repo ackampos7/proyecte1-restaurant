@@ -191,6 +191,10 @@
 
                 return $this;
         }
+
+        public function puntuacionToHTML($puntuacion) {
+                
+        }
     }
 
 ?>

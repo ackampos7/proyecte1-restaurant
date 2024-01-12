@@ -44,6 +44,9 @@
       <li class="col-12 col-md-6 col-lg-2 nav-item">
         <a class="nav-link" href="?controller=pedido">Carrito</a>
       </li>
+      <li class="col-12 col-md-6 col-lg-2 nav-item">
+        <a class="nav-link" href="?controller=reviews">Reseñas</a>
+</li>
       <?php if(isset($_SESSION['usuario'])) {    ?>
             <li class="col-12 col-md-6 col-lg-2 nav-item"><a class="nav-link" href="?controller=micuenta">Mi cuenta</a></li>
         <?php }else { ?>
