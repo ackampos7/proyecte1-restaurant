@@ -19,6 +19,14 @@
             }
         }
 
+        public static function pedidoFinalizado() {
+            if(!isset($_GET['controller'])) {
+                include_once 'vista/home.php';
+            } else {
+                include_once 'vista/pedidoFinalizado.php';
+            }
+        }
+
         public static function modificarCantidad() {
             $idcantidad = $_POST['idescondido'];
 
@@ -75,7 +83,7 @@
             setcookie("ultimopedido_".$_SESSION['usuario']->getUsuarioid(), $preciototal);
             pedidoDAO::finalizarPedido();
             $_SESSION['pedido'] = [];
-            header("Location:".URL."?controller=pedido"); 
+            header("Location:".URL."?controller=pedido&action=pedidoFinalizado"); 
         }
     }
 

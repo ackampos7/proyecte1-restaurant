@@ -38,6 +38,7 @@
 
 .intro-imagen img {
     width: 100%;
+    height: 360px;   
 }
 
 .intro-texto h1 {
@@ -97,8 +98,8 @@
 }
 
 .star-img {
-    height: 35px;
-    width: 35px;
+    height: 20px;
+    width: 20px;
 }
 
 .fecha {
@@ -106,7 +107,7 @@
 }
 
 .info-review {
-    gap: 5px;
+    gap: 10px;
 }
 
 .texto-review {
@@ -117,4 +118,45 @@
 
 .texto-review h3 {
     color: #ff7900;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown-toggle {
+    display: none;
+}
+
+.dropdown-label {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.dropdown-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.dropdown-options li {
+    padding: 3px;
+}
+
+.dropdown-option {
+    cursor: pointer;
+}
+
+#dropdown-toggle:checked + .dropdown-label + .dropdown-options {
+    display: block;
 }
