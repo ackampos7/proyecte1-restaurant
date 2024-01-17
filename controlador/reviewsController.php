@@ -9,7 +9,7 @@ include_once 'modelo/ReviewDAO.php';
             if(!isset($_GET['controller'])) {
                 include_once '../vista/home.php';
             } else {
-                $reviews = ReviewDAO::getAllReviews();
+                $api_action = "getReseñas";
                 include_once 'vista/reviews.php';
             }
         }

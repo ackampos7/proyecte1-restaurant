@@ -120,12 +120,18 @@
     color: #ff7900;
 }
 
+.div-filtros {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+}
+
 .custom-dropdown {
     position: relative;
     display: inline-block;
 }
 
-#dropdown-toggle {
+#dropdown-toggle, #dropdown-toggle2 {
     display: none;
 }
 
@@ -158,5 +164,10 @@
 }
 
 #dropdown-toggle:checked + .dropdown-label + .dropdown-options {
+    display: block;
+}
+
+
+#dropdown-toggle2:checked + .dropdown-label + .dropdown-options {
     display: block;
 }

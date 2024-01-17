@@ -11,12 +11,13 @@ class ReviewDAO {
 
         if($result = $con->query("SELECT * FROM REVIEWS;")) {
             $reviews = array();
-            while ($review = $result->fetch_object('Review')) {
+            while ($review = $result->fetch_assoc()) {
                 $reviews[] = $review;
             }
             return $reviews;
         }
     }
+
 }
 
 

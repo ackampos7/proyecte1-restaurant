@@ -1,6 +1,6 @@
 
 <section class="container-fluid">
-<?php if(count($_SESSION['pedido']) > 0) { ?>
+<?php if(count($_SESSION['pedido']) > 0 && isset($_SESSION['usuario'])) { ?>
 <div class="div-carrito-shadow">
     <h2 class="mi-carrito">TU CARRITO</h2>
     <div class="div-carrito">
