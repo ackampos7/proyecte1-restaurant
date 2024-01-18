@@ -35,20 +35,9 @@
         </div>
     </section>
     <section class="container-fluid">
-        <div id="container-nombre"></div>
+        <div class="div-reviews" id="div-reviews">
+        </div>
     </section>
     
-    <script>
-    fetch("http://localhost/proyecte1-restaurant/?controller=API&action=api")
-        .then( data => data.json())
-        .then(reseñas => {
-            let contenedornombre = document.getElementById("container-nombre");
-            reseñas.forEach(reseña => {
-                let contenido = document.createElement("div");
-                contenido.innerHTML += "<p>" + reseña.titulo + "</p>";
-                contenedornombre.appendChild(contenido);
-            })
-        })
-
-    </script>
+    <script src="src/api.js"></script>
 

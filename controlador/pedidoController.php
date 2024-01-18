@@ -9,21 +9,29 @@
         public static function index() {
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
+                include_once 'vista/footer.php';
             } else {
 
                 if(!isset($preciototal)) {
                     $preciototal = 0;
                 }
+                include_once 'vista/header.php';
                 include_once 'vista/carrito.php';
+                include_once 'vista/footer.php';
             }
         }
 
         public static function pedidoFinalizado() {
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
+                include_once 'vista/footer.php';
             } else {
+                include_once 'vista/header.php';
                 include_once 'vista/pedidoFinalizado.php';
+                include_once 'vista/footer.php';
             }
         }
 

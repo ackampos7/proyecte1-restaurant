@@ -79,7 +79,7 @@
     overflow: hidden;
 }
 
-.header-review {
+.header-review, .texto-review {
     padding: 15px;  
 }
 

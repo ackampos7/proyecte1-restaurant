@@ -7,18 +7,27 @@
         public static function index() {
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
+                include_once 'vista/footer.php';
             } else {
+                include_once 'vista/header.php';
                 include_once 'vista/iniciosesion.php';
+                include_once 'vista/footer.php';
             }
         }
 
         public static function registroVista(){
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
+                include_once 'vista/footer.php';
+
             } else {
+                include_once 'vista/header.php';
                 include_once 'vista/registrosesion.php';
+                include_once 'vista/footer.php';
             }
         }
 

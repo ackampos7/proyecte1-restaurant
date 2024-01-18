@@ -11,18 +11,26 @@
 
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
+                include_once 'vista/footer.php';
             } else {
+                include_once 'vista/header.php';
                 include_once 'vista/micuenta-panel.php';
+                include_once 'vista/footer.php';
             }
         }
 
         public static function infocuenta() {
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
+                include_once 'vista/footer.php';
             } else {
+                include_once 'vista/header.php';
                 include_once 'vista/micuenta-info.php';
+                include_once 'vista/footer.php';
             }
         }
 
@@ -30,10 +38,14 @@
 
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
+                include_once 'vista/footer.php';
             } else {
                 $productos = productoDAO::getAllProducts();
+                include_once 'vista/header.php';
                 include_once 'vista/gestionProductos.php';
+                include_once 'vista/footer.php';
             }
         }
 
@@ -41,10 +53,14 @@
 
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
+                include_once 'vista/footer.php';
             } else {
                 $usuarios = usuarioDAO::getAllUsuarios();
+                include_once 'vista/header.php';
                 include_once 'vista/gestionUsuarios.php';
+                include_once 'vista/footer.php';
             }
         }
 
@@ -77,8 +93,10 @@
         public static function añadirVista(){
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
             } else {
+                include_once 'vista/header.php';
                 include_once 'vista/añadirproducto.php';
             }
 
@@ -87,8 +105,10 @@
         public static function añadirUsuarioVista(){
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once 'vista/home.php';
             } else {
+                include_once 'vista/header.php';
                 include_once 'vista/añadirusuario.php';
             }
         }

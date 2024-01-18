@@ -6,13 +6,17 @@
         public static function index() {
             //Comprueba la existencia del controller que se ha llamado y lo incluye si lo encuentra.
             if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
                 include_once '../vista/home.php';
+                include_once 'vista/footer.php';
             } else {
                 $productos = productoDAO::getAllProducts();
                 $bocadillos = productoDAO::getProductByType(1);
                 $tapas = productoDAO::getProductByType(2);
                 $hamburguesas = productoDAO::getProductByType(3);
+                include_once 'vista/header.php';
                 include_once 'vista/carta.php';
+                include_once 'vista/footer.php';
             }
         }
 
