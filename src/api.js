@@ -2,6 +2,15 @@ fetch("http://localhost/proyecte1-restaurant/?controller=API&action=api")
         .then( data => data.json())
         .then(reseñas => {
             let divreviews = document.getElementById("div-reviews");
+            let filtrosPuntuacion = document.querySelectorAll(".filtroPuntuacion");
+            let valor = 0;
+            filtrosPuntuacion.forEach(function(filtroPuntuacion) {
+                filtroPuntuacion.addEventListener('click', function() {
+                    valor = this.getAttribute("valor");
+                    reseñas = reseñas.filter((e) => e.puntuacion == valor)
+                })
+            })
+
 
             reseñas.forEach(reseña => {
                 let review = document.createElement("article");
