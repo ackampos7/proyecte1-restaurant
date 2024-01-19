@@ -21,6 +21,9 @@
                     <li><div class="dropdown-option filtroPuntuacion" valor="2"><img class="star-img" src="imagenes/star.svg"></img><img class="star-img" src="imagenes/star.svg"></img><img class="star-img" src="imagenes/no-star.svg"></img><img class="star-img" src="imagenes/no-star.svg"></img><img class="star-img" src="imagenes/no-star.svg"></img></div></li>
                     <li><div class="dropdown-option filtroPuntuacion" valor="1"><img class="star-img" src="imagenes/star.svg"></img><img class="star-img" src="imagenes/no-star.svg"></img><img class="star-img" src="imagenes/no-star.svg"></img><img class="star-img" src="imagenes/no-star.svg"></img><img class="star-img" src="imagenes/no-star.svg"></img></div></li>
                     <li><div class="dropdown-option filtroPuntuacion" valor="0">Mostrar todo</div></li>
+                    <li><div class="dropdown-option filtroPuntuacion" valor="999">Mayor puntuación</div></li>
+                    <li><div class="dropdown-option filtroPuntuacion" valor="-1">Menor puntuación</div></li>
+
                 </ul>
             </div>
         </div>
