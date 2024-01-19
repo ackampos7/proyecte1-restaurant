@@ -36,3 +36,32 @@ form input {
     background-color: #ff7900;
 }
 
+.input-cuerpo {
+    width: 700px;
+    height: 200px;
+}
+
+.form-reseña {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: auto;
+    gap: 20px;
+}
+
+.input-reseña  {
+    width: 150px;
+}
+
+.small {
+    padding: 10px;
+    width: 150px;
+    font-size: 20px;
+}
+
+.select-puntuacion {
+    width: 30px;
+}
+
+
+

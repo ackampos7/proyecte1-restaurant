@@ -23,15 +23,16 @@
                     <li><div class="dropdown-option filtroPuntuacion" valor="0">Mostrar todo</div></li>
                     <li><div class="dropdown-option filtroPuntuacion" valor="999">Mayor puntuación</div></li>
                     <li><div class="dropdown-option filtroPuntuacion" valor="-1">Menor puntuación</div></li>
-
                 </ul>
             </div>
         </div>
     </section>
     <section class="container-fluid">
-        <div class="div-reviews" id="div-reviews">
+        <div class="row div-reviews" id="div-reviews">
         </div>
     </section>
     
-    <script src="src/api.js"></script>
+    <script src="src/reseñas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 

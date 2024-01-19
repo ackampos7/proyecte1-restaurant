@@ -1,4 +1,4 @@
-fetch("http://localhost/proyecte1-restaurant/?controller=API&action=api")
+fetch("http://localhost/proyecte1-restaurant/?controller=API&action=showReseñas")
         .then( data => data.json())
         .then(reseñas => {
             let divreviews = document.getElementById("div-reviews");
@@ -32,6 +32,7 @@ fetch("http://localhost/proyecte1-restaurant/?controller=API&action=api")
                 divreviews.innerHTML = "";
                 reseñas.forEach(reseña => {
                     let review = document.createElement("article");
+                    let initial = reseña.nombre_usuario[0];
                     review.classList.add("review", "col-12", "col-sm-12", "col-md-6", "col-lg-4");
     
                     review.innerHTML = 
@@ -39,7 +40,7 @@ fetch("http://localhost/proyecte1-restaurant/?controller=API&action=api")
                         <div class="intro-review">
                             <div class="d-flex justify-content-start align-items-center info-review">
                                 <div class="d-flex justify-content-center align-items-center perfil-review">
-                                    <p class="m-0">A</p>
+                                    <p class="m-0">${initial}</p>
                                 </div>
                                 <div>  
                                     <p class="m-0"> <b>${reseña.nombre_usuario} ${reseña.apellidos_usuario} </b></p> 

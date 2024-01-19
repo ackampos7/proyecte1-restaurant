@@ -17,6 +17,18 @@ include_once 'modelo/ReviewDAO.php';
                 include_once 'vista/footer.php';
             }
         }
+
+        public static function añadirReseña() {
+            if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
+                include_once '../vista/home.php';
+                include_once 'vista/footer.php';
+            } else {
+                include_once 'vista/header.php';
+                include_once 'vista/añadirReseña.php';
+                include_once 'vista/footer.php';
+            }
+        }
     }
 
 ?>
