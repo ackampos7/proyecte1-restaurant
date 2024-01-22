@@ -31,6 +31,30 @@
             }
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
         public static function createNewUser() {
 
             //Recoge los datos del form de la vista y los envia a usuarioDAO

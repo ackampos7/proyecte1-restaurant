@@ -12,12 +12,21 @@ class APIController {
             return;
     }
 
-    public function insertarReseñas() {
-        if(isset($_POST['reseña'])) {
-            $reseña = $_POST['reseña'];
-            $reseña = json_decode($reseña, true);
-            reviewDAO::insertReview($reseña);
-        }
+    public function insertarReviews() {
+    
+            $data = json_decode(file_get_contents('php://input'), true);
+
+            $usuarioid = $data['usuario_id'];
+            $pedidoid = $data['pedido_id'];
+            $nombre = $data['nombre_usuario'];
+            $apellidos = $data['apellidos_usuario'];
+            $titulo = $data['titulo'];
+            $cuerpo = $data['cuerpo'];
+            $fecha = $data['fecha'];
+            $puntuacion = $data['puntuacion'];
+
+            reviewDAO::insertReview($usuarioid, $pedidoid, $nombre, $apellidos, $titulo, $cuerpo, $fecha, $puntuacion);
+    
     }
 }
 
