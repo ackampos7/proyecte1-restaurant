@@ -35,6 +35,18 @@
             }
         }
 
+        public static function infoPedido() {
+            if(!isset($_GET['controller'])) {
+                include_once 'vista/header.php';
+                include_once 'vista/home.php';
+                include_once 'vista/footer.php';
+            } else {
+                include_once 'vista/header.php';
+                include_once 'vista/infoPedido.php';
+                include_once 'vista/footer.php';
+            }
+        }
+
         public static function modificarCantidad() {
             $idcantidad = $_POST['idescondido'];
 
@@ -93,6 +105,7 @@
             $_SESSION['pedido'] = [];
             header("Location:".URL."?controller=pedido&action=pedidoFinalizado"); 
         }
+
     }
 
 

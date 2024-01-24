@@ -19,7 +19,7 @@ añadirReseña.addEventListener("click", () => {
         method: 'POST',
         body: JSON.stringify({
                 usuario_id: usuarioid,
-                pedido_id: 32,
+                pedido_id: pedidoid,
                 nombre_usuario: nombre,
                 apellidos_usuario: apellidos,
                 titulo: tituloreseña,
