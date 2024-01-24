@@ -13,7 +13,7 @@
             echo $usuarioid;
             $result = $con->query("INSERT INTO pedidos (usuario_id, fecha_pedido, estado) VALUES ('$usuarioid', '$date', 'En proceso');");
             $pedidoid = mysqli_insert_id($con);
-            echo $pedidoid;
+            $_SESSION['pedidoid'] = $pedidoid;
 
             foreach($_SESSION['pedido'] as $producto) {
                 $productoid = $producto[0];

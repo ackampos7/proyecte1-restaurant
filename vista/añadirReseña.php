@@ -12,6 +12,10 @@
                     <option value="1">1</option>
                 </select>
                 <input class="input-cuerpo" id="cuerporeseña" type="text"></input>
+                <input type="hidden" id="usuarioidreseña" value="<?= $_SESSION['usuario']->getUsuarioid() ?>"></input>
+                <input type="hidden" id="nombrereseña" value="<?= $_SESSION['usuario']->getNombre() ?>"></input>
+                <input type="hidden" id="apellidosreseña" value="<?= $_SESSION['usuario']->getApellidos() ?>"></input>
+                <input type="hidden" id="pedidoidreseña" value="<?= $_SESSION['pedidoid'] ?>"></input>
                 <button class="finalizado-button small" id="boton-reseña">Enviar</button>
             </div>
         </div>
