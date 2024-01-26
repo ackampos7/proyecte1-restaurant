@@ -22,6 +22,14 @@ class APIController {
         return;
     }
 
+    public function getAllProducts() {
+        $productos = productoDAO::getAllProducts();
+        $productos = json_encode($productos, JSON_UNESCAPED_UNICODE);
+        header('Content-Type: application/json');
+        echo $productos;
+        return;
+    }
+
     public function insertarReviews() {
     
             $data = json_decode(file_get_contents('php://input'), true);
