@@ -101,7 +101,7 @@
             //Finaliza el pedido y lo guarda en la base de datos
             $preciototal = $_POST['preciototal'];
             setcookie("ultimopedido_".$_SESSION['usuario']->getUsuarioid(), $preciototal);
-            pedidoDAO::finalizarPedido();
+            pedidoDAO::finalizarPedido($preciototal);
             $_SESSION['pedido'] = [];
             header("Location:".URL."?controller=pedido&action=pedidoFinalizado"); 
         }

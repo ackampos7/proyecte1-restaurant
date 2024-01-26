@@ -5,13 +5,13 @@
 
     class pedidoDAO {
 
-        public static function finalizarPedido()  {
+        public static function finalizarPedido($preciototal)  {
             //Guarda los detalles del pedido en la base de datos, tanto en pedidos como en pedido-productos
             $con = database::connect();
             $usuarioid = $_SESSION['usuario']->getUsuarioid();
             $date = date('Y-m-d.H:i:s');
             echo $usuarioid;
-            $result = $con->query("INSERT INTO pedidos (usuario_id, fecha_pedido, estado) VALUES ('$usuarioid', '$date', 'En proceso');");
+            $result = $con->query("INSERT INTO pedidos (usuario_id, fecha_pedido, estado, precio_total) VALUES ('$usuarioid', '$date', 'En proceso', '$preciototal');");
             $pedidoid = mysqli_insert_id($con);
             $_SESSION['pedidoid'] = $pedidoid;
 
@@ -29,17 +29,21 @@
 
         public static function getInfoPedido($id) {
             $con = database::connect();
-            $result = $con->query("SELECT PEDIDOS.PEDIDO_ID, PEDIDOS.FECHA_PEDIDO, PEDIDO_PRODUCTOS.PRODUCTO_ID, PEDIDO_PRODUCTOS.CANTIDAD, PEDIDO_PRODUCTOS.PRECIO_UNIDAD, PRODUCTOS.NOMBRE_PRODUCTO FROM PEDIDOS JOIN PEDIDO_PRODUCTOS ON PEDIDOS.PEDIDO_ID = PEDIDO_PRODUCTOS.PEDIDO_ID JOIN PRODUCTOS ON PRODUCTOS.PRODUCTO_ID = PEDIDO_PRODUCTOS.PRODUCTO_ID WHERE PEDIDOS.PEDIDO_ID = '$id'");
+            $stmt = $con->prepare("SELECT PEDIDOS.PEDIDO_ID, PEDIDOS.FECHA_PEDIDO, PEDIDOS.PRECIO_TOTAL, PEDIDO_PRODUCTOS.PRODUCTO_ID, PEDIDO_PRODUCTOS.CANTIDAD, PEDIDO_PRODUCTOS.PRECIO_UNIDAD, PRODUCTOS.NOMBRE_PRODUCTO FROM PEDIDOS JOIN PEDIDO_PRODUCTOS ON PEDIDOS.PEDIDO_ID = PEDIDO_PRODUCTOS.PEDIDO_ID JOIN PRODUCTOS ON PRODUCTOS.PRODUCTO_ID = PEDIDO_PRODUCTOS.PRODUCTO_ID WHERE PEDIDOS.PEDIDO_ID = ?");
+            $stmt->bind_param("i", $id);
+            $stmt->execute();
+            $result = $stmt->get_result();
             $info = array();
 
             while($row = $result->fetch_assoc()) {
                 $info[] = [
-                    'pedido_id' => $row['pedido_id'],
-                    'fecha' => $row['fecha_pedido'],
-                    'producto_id' => $row['producto_id'],
-                    'cantidad' => $row['cantidad'],
-                    'precio' => $row['precio_unidad'],
-                    'nombre' => $row['nombre_producto'],
+                    'pedido_id' => $row['PEDIDO_ID'],
+                    'fecha' => $row['FECHA_PEDIDO'],
+                    'precio_total' => $row['PRECIO_TOTAL'],
+                    'producto_id' => $row['PRODUCTO_ID'],
+                    'cantidad' => $row['CANTIDAD'],
+                    'precio' => $row['PRECIO_UNIDAD'],
+                    'nombre' => $row['NOMBRE_PRODUCTO'],
                 ];
             }
             

@@ -16,7 +16,7 @@ class APIController {
     public function getInfoPedido() {
         $id = $_GET['pedidoid'];
         $infopedido = pedidoDAO::getInfoPedido($id);
-        $infopedido = json_encode($reviews, JSON_UNESCAPED_UNICODE);
+        $infopedido = json_encode($infopedido, JSON_UNESCAPED_UNICODE);
         header('Content-Type: application/json');
         echo $infopedido;
         return;
