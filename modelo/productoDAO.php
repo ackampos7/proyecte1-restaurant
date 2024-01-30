@@ -13,9 +13,9 @@
 
             if($result = $con->query("SELECT * FROM productos;")) {
                 $productos = array();
-                while ($producto = $result->fetch_object('Producto')) {
+                while ($producto = $result->fetch_assoc()) {
                     $productos[] = $producto;
-                }
+                }   
                 return $productos;
             }
         }

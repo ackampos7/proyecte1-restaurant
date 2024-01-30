@@ -2,6 +2,7 @@
 
 include_once 'modelo/reviewDAO.php';
 include_once 'modelo/pedidoDAO.php';
+include_once 'modelo/productoDAO.php';
 
 class APIController {
 
