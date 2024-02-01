@@ -25,7 +25,7 @@
         <input type="checkbox" class="filtroCategorias" valor="1">Bocadillos</input>
         <input type="checkbox" class="filtroCategorias" valor="2">Tapas</input>
         <input type="checkbox" class="filtroCategorias" valor="3">Hamburguesas</input>
-        <button id="botonfiltro">Filtrar</button>
+        <button id="botonfiltro" class="boton-filtro">Filtrar</button>
     </div>
 </section>
 

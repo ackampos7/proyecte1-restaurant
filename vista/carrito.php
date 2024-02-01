@@ -19,7 +19,7 @@
                     $cantidad = $p[1];
                     $precioproductototal = calcularPrecioTotal::calcularPrecioProductoTotal($cantidad, $productoCarro->getPrecioUnidad());
                     $preciototal = $preciototal + $precioproductototal;
-            ?>
+            ?>  
             <tr class="row-producto">
                 <td><img src="<?php echo $productoCarro->getImg() ?>" height="143" width="212.83" alt="Imagen del producto"></td>
                 <td><?= $productoCarro->getNombre() ?></td>
@@ -47,13 +47,18 @@
     </table>
     </div>
     <div class="row container-precio">
+        <?php $preciototal = $preciototal + ($propina/100) * $preciototal ?>
         <div class="col-12 col-md-6 col-lg-6 preciototal">
-            <p><strong>Precio Total:</strong> <?= $preciototal ?>€</p>
+            <div class="div-propina">
+                <input type="checkbox" id="activar-propina">Propina
+                <input type="number" class="propina-input" id="propina-input" min="1" max="100" value="3" readonly>
+            </div>
+            <p class="textoprecio"><strong>Precio Total:</strong> <?= $preciototal ?>€</p>
         </div>
         <div class="col-12 col-md-12 col-lg-6 finalizar">
         <form action="<?= URL ?>?controller=pedido&action=finalizarPedido" method="post">
             <input type="hidden" name="preciototal" value="<?= $preciototal ?>">
-            <input class="finalizar-button" type="submit" name="finalizarpedido" value="Finalizar pedido">
+            <input class="m-0 finalizar-button" type="submit" name="finalizarpedido" value="Finalizar pedido">
         </form>
         </div>
     </div>
@@ -74,3 +79,5 @@
 <?php    
 }
 ?>
+
+<script src="src/propina.js"></script>

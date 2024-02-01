@@ -177,4 +177,12 @@
 .filtrosCategorias {
     display: flex;
     gap: 10px;
+    margin: 50px 0px 50px 0px;
+}
+
+.boton-filtro {
+    background-color: #ff7900;
+    border: none;
+    color: white;
+    border-radius: 3px;
 }

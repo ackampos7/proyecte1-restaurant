@@ -11,7 +11,7 @@
             //Obtiene todos los productos de la base de datos y los devuelve en forma de array
             $con = dataBase::connect();
 
-            if($result = $con->query("SELECT * FROM productos;")) {
+            if($result = $con->query("SELECT * FROM productos ORDER BY CATEGORIA_ID;")) {
                 $productos = array();
                 while ($producto = $result->fetch_assoc()) {
                     $productos[] = $producto;

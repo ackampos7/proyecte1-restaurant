@@ -146,4 +146,34 @@ body {
     gap: 100px;
 }
 
+.container-precio {
+    display: flex;
+    align-items: center;
+}
 
+.preciototal {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.div-propina {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.textoprecio {
+    margin: 0;
+}
+
+.propina-input {
+    width: 50px;
+    justify-content: center;
+}
+
+#propina-input[readonly] {
+        background-color: #f0f0f0; 
+        color: #555;
+        cursor: not-allowed;
+}

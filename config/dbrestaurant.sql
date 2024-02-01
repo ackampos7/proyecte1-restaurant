@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Temps de generació: 12-01-2024 a les 17:55:33
+-- Temps de generació: 01-02-2024 a les 16:19:45
 -- Versió del servidor: 10.4.32-MariaDB
 -- Versió de PHP: 8.2.12
 
@@ -44,166 +44,6 @@ INSERT INTO `categorias` (`categoria_id`, `nombre_categoria`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de la taula `pedido-productos`
---
-
-CREATE TABLE `pedido-productos` (
-  `pedido_id` int(255) NOT NULL,
-  `producto_id` int(255) NOT NULL,
-  `precio_unidad` double NOT NULL,
-  `cantidad` int(255) NOT NULL,
-  `estado` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Bolcament de dades per a la taula `pedido-productos`
---
-
-INSERT INTO `pedido-productos` (`pedido_id`, `producto_id`, `precio_unidad`, `cantidad`, `estado`) VALUES
-(0, 10, 3.75, 6, ''),
-(0, 5, 4.5, 2, ''),
-(0, 9, 5, 2, ''),
-(0, 6, 4, 4, ''),
-(0, 10, 3.75, 6, ''),
-(0, 5, 4.5, 3, ''),
-(0, 9, 5, 3, ''),
-(0, 6, 4, 5, ''),
-(0, 8, 4.25, 1, ''),
-(6, 10, 3.75, 7, ''),
-(6, 5, 4.5, 3, ''),
-(6, 9, 5, 3, ''),
-(6, 6, 4, 5, ''),
-(6, 8, 4.25, 1, ''),
-(7, 5, 4.5, 1, ''),
-(7, 10, 3.75, 3, ''),
-(7, 6, 4, 1, ''),
-(8, 5, 4.5, 2, ''),
-(8, 10, 3.75, 1, ''),
-(8, 8, 4.25, 5, ''),
-(9, 5, 4.5, 2, ''),
-(9, 10, 3.75, 1, ''),
-(9, 8, 4.25, 6, ''),
-(9, 6, 4, 1, ''),
-(9, 7, 3.5, 6, ''),
-(10, 5, 4.5, 2, ''),
-(10, 10, 3.75, 1, ''),
-(10, 8, 4.25, 6, ''),
-(10, 6, 4, 1, ''),
-(10, 7, 3.5, 6, ''),
-(11, 5, 4.5, 2, ''),
-(11, 10, 3.75, 1, ''),
-(11, 8, 4.25, 6, ''),
-(11, 6, 4, 1, ''),
-(11, 7, 3.5, 6, ''),
-(12, 5, 4.5, 2, ''),
-(12, 10, 3.75, 1, ''),
-(12, 8, 4.25, 6, ''),
-(12, 6, 4, 1, ''),
-(12, 7, 3.5, 6, ''),
-(13, 5, 4.5, 2, ''),
-(13, 10, 3.75, 1, ''),
-(13, 8, 4.25, 6, ''),
-(13, 6, 4, 1, ''),
-(13, 7, 3.5, 6, ''),
-(14, 5, 4.5, 2, ''),
-(14, 10, 3.75, 1, ''),
-(14, 8, 4.25, 6, ''),
-(14, 6, 4, 1, ''),
-(14, 7, 3.5, 6, ''),
-(15, 5, 4.5, 2, ''),
-(15, 10, 3.75, 1, ''),
-(15, 8, 4.25, 6, ''),
-(15, 6, 4, 1, ''),
-(15, 7, 3.5, 6, ''),
-(16, 5, 4.5, 2, ''),
-(16, 10, 3.75, 1, ''),
-(16, 8, 4.25, 6, ''),
-(16, 6, 4, 1, ''),
-(16, 7, 3.5, 6, ''),
-(17, 8, 4.25, 10, ''),
-(17, 6, 4, 1, ''),
-(17, 7, 3.5, 6, ''),
-(18, 8, 4.25, 10, ''),
-(18, 6, 4, 1, ''),
-(18, 7, 3.5, 6, ''),
-(19, 8, 4.25, 10, ''),
-(19, 6, 4, 1, ''),
-(19, 7, 3.5, 6, ''),
-(20, 8, 4.25, 10, ''),
-(20, 6, 4, 1, ''),
-(20, 7, 3.5, 6, ''),
-(21, 8, 4.25, 10, ''),
-(21, 6, 4, 1, ''),
-(21, 7, 3.5, 6, ''),
-(22, 8, 4.25, 10, ''),
-(22, 6, 4, 1, ''),
-(22, 7, 3.5, 6, ''),
-(23, 8, 4.25, 13, ''),
-(23, 6, 4, 1, ''),
-(23, 7, 3.5, 6, ''),
-(24, 8, 4.25, 13, ''),
-(24, 6, 4, 1, ''),
-(24, 7, 3.5, 6, ''),
-(25, 8, 4.25, 13, ''),
-(25, 6, 4, 1, ''),
-(25, 7, 3.5, 6, ''),
-(26, 8, 4.25, 13, ''),
-(26, 6, 4, 1, ''),
-(26, 7, 3.5, 6, ''),
-(27, 8, 4.25, 13, ''),
-(27, 6, 4, 1, ''),
-(27, 7, 3.5, 6, ''),
-(28, 8, 4.25, 13, ''),
-(28, 6, 4, 1, ''),
-(28, 7, 3.5, 6, ''),
-(29, 8, 4.25, 13, ''),
-(29, 6, 4, 1, ''),
-(29, 7, 3.5, 6, ''),
-(30, 5, 4.5, 2, ''),
-(30, 9, 5, 1, ''),
-(31, 5, 4.5, 2, ''),
-(31, 9, 5, 1, ''),
-(32, 5, 4.5, 3, ''),
-(32, 9, 5, 3, ''),
-(32, 7, 3.5, 1, ''),
-(32, 8, 4.25, 4, ''),
-(33, 5, 4.5, 10, ''),
-(33, 6, 4, 3, ''),
-(33, 8, 4.25, 3, ''),
-(34, 5, 4.5, 10, ''),
-(34, 6, 4, 3, ''),
-(34, 8, 4.25, 3, ''),
-(35, 5, 4.5, 2, ''),
-(35, 10, 3.75, 2, ''),
-(35, 7, 3.5, 1, ''),
-(35, 8, 4.25, 4, ''),
-(36, 5, 4.5, 3, ''),
-(36, 10, 3.75, 1, ''),
-(36, 7, 3.5, 1, ''),
-(36, 8, 4.25, 4, ''),
-(37, 8, 4.25, 3, ''),
-(37, 14, 7, 7, ''),
-(37, 9, 5, 1, ''),
-(37, 6, 4.75, 2, ''),
-(37, 7, 3.45, 1, ''),
-(38, 8, 4.25, 3, ''),
-(38, 11, 4.5, 1, ''),
-(38, 6, 4.74, 11, ''),
-(39, 8, 4.25, 3, ''),
-(39, 11, 4.5, 6, ''),
-(39, 6, 4.74, 11, ''),
-(40, 8, 4.25, 4, ''),
-(40, 11, 4.5, 6, ''),
-(40, 6, 4.74, 11, ''),
-(40, 15, 4.75, 1, ''),
-(41, 8, 4.25, 1, ''),
-(41, 18, 5, 5, ''),
-(42, 22, 4.75, 1, ''),
-(43, 6, 4.74, 1, '');
-
--- --------------------------------------------------------
-
---
 -- Estructura de la taula `pedidos`
 --
 
@@ -211,57 +51,44 @@ CREATE TABLE `pedidos` (
   `pedido_id` int(255) NOT NULL,
   `usuario_id` int(255) NOT NULL,
   `fecha_pedido` date NOT NULL,
-  `estado` varchar(255) NOT NULL
+  `estado` varchar(255) NOT NULL,
+  `precio_total` decimal(65,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Bolcament de dades per a la taula `pedidos`
 --
 
-INSERT INTO `pedidos` (`pedido_id`, `usuario_id`, `fecha_pedido`, `estado`) VALUES
-(1, 0, '2023-12-13', 'En proceso'),
-(2, 0, '2023-12-13', 'En proceso'),
-(3, 0, '2023-12-13', 'En proceso'),
-(4, 0, '2023-12-13', 'En proceso'),
-(5, 0, '2023-12-13', 'En proceso'),
-(6, 0, '2023-12-13', 'En proceso'),
-(7, 0, '2023-12-13', 'En proceso'),
-(8, 0, '2023-12-13', 'En proceso'),
-(9, 0, '2023-12-13', 'En proceso'),
-(10, 0, '2023-12-13', 'En proceso'),
-(11, 0, '2023-12-13', 'En proceso'),
-(12, 0, '2023-12-13', 'En proceso'),
-(13, 0, '2023-12-13', 'En proceso'),
-(14, 0, '2023-12-13', 'En proceso'),
-(15, 0, '2023-12-13', 'En proceso'),
-(16, 0, '2023-12-13', 'En proceso'),
-(17, 0, '2023-12-13', 'En proceso'),
-(18, 0, '2023-12-13', 'En proceso'),
-(19, 0, '2023-12-13', 'En proceso'),
-(20, 0, '2023-12-13', 'En proceso'),
-(21, 0, '2023-12-13', 'En proceso'),
-(22, 0, '2023-12-13', 'En proceso'),
-(23, 0, '2023-12-13', 'En proceso'),
-(24, 0, '2023-12-13', 'En proceso'),
-(25, 0, '2023-12-13', 'En proceso'),
-(26, 0, '2023-12-13', 'En proceso'),
-(27, 0, '2023-12-13', 'En proceso'),
-(28, 0, '2023-12-13', 'En proceso'),
-(29, 0, '2023-12-13', 'En proceso'),
-(30, 1, '2023-12-13', 'En proceso'),
-(31, 1, '2023-12-13', 'En proceso'),
-(32, 1, '2023-12-13', 'En proceso'),
-(33, 1, '2023-12-13', 'En proceso'),
-(34, 1, '2023-12-13', 'En proceso'),
-(35, 2, '2023-12-13', 'En proceso'),
-(36, 2, '2023-12-14', 'En proceso'),
-(37, 1, '2023-12-18', 'En proceso'),
-(38, 1, '2023-12-19', 'En proceso'),
-(39, 1, '2023-12-19', 'En proceso'),
-(40, 1, '2023-12-19', 'En proceso'),
-(41, 1, '2024-01-08', 'En proceso'),
-(42, 999, '2024-01-08', 'En proceso'),
-(43, 1, '2024-01-11', 'En proceso');
+INSERT INTO `pedidos` (`pedido_id`, `usuario_id`, `fecha_pedido`, `estado`, `precio_total`) VALUES
+(1, 1, '2024-01-26', 'En proceso', 37),
+(2, 1, '2024-01-26', 'En proceso', 55);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de la taula `pedido_productos`
+--
+
+CREATE TABLE `pedido_productos` (
+  `pedido_id` int(255) NOT NULL,
+  `producto_id` int(255) NOT NULL,
+  `precio_unidad` double NOT NULL,
+  `cantidad` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Bolcament de dades per a la taula `pedido_productos`
+--
+
+INSERT INTO `pedido_productos` (`pedido_id`, `producto_id`, `precio_unidad`, `cantidad`) VALUES
+(1, 15, 4.75, 1),
+(1, 10, 3.75, 4),
+(1, 26, 4.75, 1),
+(1, 20, 4.25, 3),
+(2, 11, 4.5, 5),
+(2, 18, 5, 4),
+(2, 10, 3.75, 1),
+(2, 20, 4.25, 2);
 
 -- --------------------------------------------------------
 
@@ -324,9 +151,11 @@ CREATE TABLE `reviews` (
 --
 
 INSERT INTO `reviews` (`review_id`, `usuario_id`, `pedido_id`, `nombre_usuario`, `apellidos_usuario`, `titulo`, `cuerpo`, `fecha`, `puntuacion`) VALUES
-(1, 999, 15, 'Admin', 'Istrador', 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2024-01-11', 4),
-(2, 999, 13, 'Paco', 'Galaxia', 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i', '2024-01-11', 3),
-(3, 999, 19, 'Ernesto', 'Viyuela', 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i', '2024-01-11', 5);
+(4, 1, 32, 'Joel', 'Cosp Crespo', 'Lorem Ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '2024-01-19', 2),
+(24, 999, 33, 'Antonio', 'Canovas del Castillo', 'Primero de todo, buenas tardes', 'Hola dios estoy aqui, gracias te doy por darme la vida hazla nueva todos los dias buenas tardes mi señor', '2024-03-23', 3),
+(25, 111, 32, 'Joel', 'Cosp Crespo', 'La excelencia no se busca, te encuentra', 'Pocos paladares han tenido la fortuna de deleitar tales manjares.', '2024-01-22', 5),
+(26, 111, 32, 'Joel', 'Cosp Crespo', 'Buenos dias y buenas tardes', 'Que grande este tio, no?', '2024-01-22', 2),
+(28, 1, 32, 'Joel', 'Cosp Crespo', 'La excelencia en su maximo esplendor', 'Simplemente excelente', '2024-01-24', 1);
 
 -- --------------------------------------------------------
 
@@ -352,7 +181,8 @@ INSERT INTO `usuarios` (`usuario_id`, `nombre`, `apellidos`, `contraseña`, `ema
 (2, 'Marc', 'Martinez Sotillo', 'markilocuras', 'marcmartinez@gmail.com', 'Cliente'),
 (3, 'Paco', 'Galaxia', 'pacogalaxia', 'pacogalaxia@gmail.com', 'Cliente'),
 (4, 'Ernesto', 'Sanchez Santino', 'ernesto', 'ernesto@gmail.com', 'Cliente'),
-(999, 'Admin', 'Istrador', 'admin1234', 'admin1234@gmail.com', 'Administrador');
+(999, 'Admin', 'Istrador', 'admin1234', 'admin1234@gmail.com', 'Administrador'),
+(1000, 'Jose Luís', 'Rodriguez Zapatero', 'presidente', 'zapatero@gmail.com', 'Cliente');
 
 --
 -- Índexs per a les taules bolcades
@@ -403,7 +233,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT per la taula `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `pedido_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `pedido_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT per la taula `productos`
@@ -415,13 +245,13 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT per la taula `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `review_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `review_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT per la taula `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `usuario_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1000;
+  MODIFY `usuario_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1001;
 
 --
 -- Restriccions per a les taules bolcades
