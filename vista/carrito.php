@@ -1,4 +1,3 @@
-
 <section class="container-fluid">
 <?php if(count($_SESSION['pedido']) > 0 && isset($_SESSION['usuario'])) { ?>
 <div class="div-carrito-shadow">
@@ -20,6 +19,8 @@
                     $precioproductototal = calcularPrecioTotal::calcularPrecioProductoTotal($cantidad, $productoCarro->getPrecioUnidad());
                     $preciototal = $preciototal + $precioproductototal;
             ?>  
+
+            <input type="hidden" name="preciototal" id="preciobase" value="<?= $preciototal ?>">
             <tr class="row-producto">
                 <td><img src="<?php echo $productoCarro->getImg() ?>" height="143" width="212.83" alt="Imagen del producto"></td>
                 <td><?= $productoCarro->getNombre() ?></td>
@@ -47,17 +48,16 @@
     </table>
     </div>
     <div class="row container-precio">
-        <?php $preciototal = $preciototal + ($propina/100) * $preciototal ?>
         <div class="col-12 col-md-6 col-lg-6 preciototal">
             <div class="div-propina">
                 <input type="checkbox" id="activar-propina">Propina
                 <input type="number" class="propina-input" id="propina-input" min="1" max="100" value="3" readonly>
             </div>
-            <p class="textoprecio"><strong>Precio Total:</strong> <?= $preciototal ?>€</p>
+            <p class="textoprecio" id="textoprecio"><?= $preciototal ?>€</p>
         </div>
         <div class="col-12 col-md-12 col-lg-6 finalizar">
-        <form action="<?= URL ?>?controller=pedido&action=finalizarPedido" method="post">
-            <input type="hidden" name="preciototal" value="<?= $preciototal ?>">
+        <form action="<?= URL ?>?controller=pedido&action=finalizarPedido" method="post" id="formfinalizar">
+            <input type="hidden" name="preciototal" id="preciototal" value="<?= $preciototal ?>">
             <input class="m-0 finalizar-button" type="submit" name="finalizarpedido" value="Finalizar pedido">
         </form>
         </div>
