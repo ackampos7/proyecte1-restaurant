@@ -49,14 +49,20 @@
     </div>
     <div class="row container-precio">
         <div class="col-12 col-md-6 col-lg-6 preciototal">
-            <div class="div-propina">
-                <input type="checkbox" id="activar-propina">Propina
-                <input type="number" class="propina-input" id="propina-input" min="1" max="100" value="3" readonly>
+            <div class="div-modificarprecio">
+                <input type="checkbox" id="activar-propina" checked>Propina
+                <input type="number" class="pedido-input" id="propina-input" min="1" max="100" value="3">
+            </div>
+            <div class="div-modificarprecio">
+                <input type="checkbox" id="activar-puntos">Puntos
+                <input type="number" class="pedido-input" id="puntos-input" min="0" max="" value="100" step="100" readonly>
             </div>
             <p class="textoprecio" id="textoprecio"><?= $preciototal ?>€</p>
         </div>
         <div class="col-12 col-md-12 col-lg-6 finalizar">
         <form action="<?= URL ?>?controller=pedido&action=finalizarPedido" method="post" id="formfinalizar">
+            <input type="hidden" name="puntosusuario" id="puntosusuario" value="<?= $_SESSION['usuario']->getPuntos() ?>">
+            <input type="hidden" name="propina" id="propina" value="3">
             <input type="hidden" name="preciototal" id="preciototal" value="<?= $preciototal ?>">
             <input class="m-0 finalizar-button" type="submit" name="finalizarpedido" value="Finalizar pedido">
         </form>

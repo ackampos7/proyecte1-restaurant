@@ -157,7 +157,7 @@ body {
     gap: 30px;
 }
 
-.div-propina {
+.div-modificarprecio {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -167,7 +167,7 @@ body {
     margin: 0;
 }
 
-.propina-input {
+.pedido-input {
     width: 50px;
     justify-content: center;
 }
@@ -176,4 +176,10 @@ body {
         background-color: #f0f0f0; 
         color: #555;
         cursor: not-allowed;
+}
+
+#puntos-input[readonly] {
+    background-color: #f0f0f0; 
+    color: #555;
+    cursor: not-allowed;
 }

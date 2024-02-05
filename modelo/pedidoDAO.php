@@ -5,13 +5,13 @@
 
     class pedidoDAO {
 
-        public static function finalizarPedido($preciototal)  {
+        public static function finalizarPedido($preciototal, $propina)  {
             //Guarda los detalles del pedido en la base de datos, tanto en pedidos como en pedido-productos
             $con = database::connect();
             $usuarioid = $_SESSION['usuario']->getUsuarioid();
             $date = date('Y-m-d.H:i:s');
             echo $usuarioid;
-            $result = $con->query("INSERT INTO pedidos (usuario_id, fecha_pedido, estado, precio_total) VALUES ('$usuarioid', '$date', 'En proceso', '$preciototal');");
+            $result = $con->query("INSERT INTO pedidos (usuario_id, fecha_pedido, estado, precio_total, propina) VALUES ('$usuarioid', '$date', 'En proceso', '$preciototal', '$propina');");
             $pedidoid = mysqli_insert_id($con);
             $_SESSION['pedidoid'] = $pedidoid;
 

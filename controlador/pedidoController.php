@@ -100,8 +100,9 @@
         public static function finalizarPedido(){
             //Finaliza el pedido y lo guarda en la base de datos
             $preciototal = $_POST['preciototal'];
+            $propina = $_POST['propina'];
             setcookie("ultimopedido_".$_SESSION['usuario']->getUsuarioid(), $preciototal);
-            pedidoDAO::finalizarPedido($preciototal);
+            pedidoDAO::finalizarPedido($preciototal, $propina);
             $_SESSION['pedido'] = [];
             header("Location:".URL."?controller=pedido&action=pedidoFinalizado"); 
         }
