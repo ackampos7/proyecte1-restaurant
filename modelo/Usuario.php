@@ -8,6 +8,7 @@
         protected $contraseña;
         protected $email;
         protected $rol;
+        protected $puntos;
 
 
         /**
@@ -130,6 +131,32 @@
                 $this->rol = $rol;
 
                 return $this;
+        }
+
+                /**
+         * Get the value of puntos
+         */ 
+        public function getPuntos()
+        {
+                return $this->puntos;
+        }
+
+        /**
+         * Set the value of puntos
+         *
+         * @return  self
+         */ 
+        public function setPuntos($puntos)
+        {
+                $this->puntos = $puntos;
+
+                return $this;
+        }
+
+        public function getInitials() {
+                $initial = $this->nombre[0];
+                
+                return $initial;
         }
     }
 

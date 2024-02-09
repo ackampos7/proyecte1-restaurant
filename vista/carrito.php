@@ -1,6 +1,5 @@
-
 <section class="container-fluid">
-<?php if(count($_SESSION['pedido']) > 0) { ?>
+<?php if(count($_SESSION['pedido']) > 0 && isset($_SESSION['usuario'])) { ?>
 <div class="div-carrito-shadow">
     <h2 class="mi-carrito">TU CARRITO</h2>
     <div class="div-carrito">
@@ -19,7 +18,9 @@
                     $cantidad = $p[1];
                     $precioproductototal = calcularPrecioTotal::calcularPrecioProductoTotal($cantidad, $productoCarro->getPrecioUnidad());
                     $preciototal = $preciototal + $precioproductototal;
-            ?>
+            ?>  
+
+            <input type="hidden" name="preciototal" id="preciobase" value="<?= $preciototal ?>">
             <tr class="row-producto">
                 <td><img src="<?php echo $productoCarro->getImg() ?>" height="143" width="212.83" alt="Imagen del producto"></td>
                 <td><?= $productoCarro->getNombre() ?></td>
@@ -48,12 +49,22 @@
     </div>
     <div class="row container-precio">
         <div class="col-12 col-md-6 col-lg-6 preciototal">
-            <p><strong>Precio Total:</strong> <?= $preciototal ?>€</p>
+            <div class="div-modificarprecio">
+                <input type="checkbox" id="activar-propina" checked>Propina
+                <input type="number" class="pedido-input" id="propina-input" min="1" max="100" value="3">
+            </div>
+            <div class="div-modificarprecio">
+                <input type="checkbox" id="activar-puntos">Puntos
+                <input type="number" class="pedido-input" id="puntos-input" min="0" max="" value="100" step="100" readonly onkeydown="return false">
+            </div>
+            <p class="textoprecio" id="textoprecio"><?= $preciototal ?>€</p>
         </div>
         <div class="col-12 col-md-12 col-lg-6 finalizar">
-        <form action="<?= URL ?>?controller=pedido&action=finalizarPedido" method="post">
-            <input type="hidden" name="preciototal" value="<?= $preciototal ?>">
-            <input class="finalizar-button" type="submit" name="finalizarpedido" value="Finalizar pedido">
+        <form action="<?= URL ?>?controller=pedido&action=finalizarPedido" method="post" id="formfinalizar">
+            <input type="hidden" name="puntosusuario" id="puntosusuario" value="<?= $_SESSION['usuario']->getPuntos() ?>">
+            <input type="hidden" name="propina" id="propina" value="3">
+            <input type="hidden" name="preciototal" id="preciototal" value="<?= $preciototal ?>">
+            <input class="m-0 finalizar-button" type="submit" name="finalizarpedido" value="Finalizar pedido">
         </form>
         </div>
     </div>
@@ -74,3 +85,5 @@
 <?php    
 }
 ?>
+
+<script src="src/propina.js"></script>

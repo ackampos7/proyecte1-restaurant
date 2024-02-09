@@ -1,11 +1,13 @@
 <?php
     include_once 'config/functions.php';
     include_once 'config/parameters.php';
-    include_once 'vista/header.php';
     include_once 'controlador/pedidoController.php';
     include_once 'controlador/productoController.php';
     include_once 'controlador/usuarioController.php';
     include_once 'controlador/homeController.php';
+    include_once 'controlador/reviewsController.php';
+    include_once 'controlador/APIController.php';
+    include_once 'controlador/micuentaController.php';
 
     if(!isset($_GET['controller'])) {
         header("Location:" . URL . "?controller=home");
@@ -27,6 +29,4 @@
             header("Location:".URL."?controller=home");
         }
     }
-
-    include_once 'vista/footer.php';
 ?>
