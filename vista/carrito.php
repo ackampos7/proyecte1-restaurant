@@ -55,7 +55,7 @@
             </div>
             <div class="div-modificarprecio">
                 <input type="checkbox" id="activar-puntos">Puntos
-                <input type="number" class="pedido-input" id="puntos-input" min="0" max="" value="100" step="100" readonly>
+                <input type="number" class="pedido-input" id="puntos-input" min="0" max="" value="100" step="100" readonly onkeydown="return false">
             </div>
             <p class="textoprecio" id="textoprecio"><?= $preciototal ?>€</p>
         </div>

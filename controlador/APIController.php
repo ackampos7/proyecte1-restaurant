@@ -21,7 +21,7 @@ class APIController {
         header('Content-Type: application/json');
         echo $infopedido;
         return;
-    }
+}
 
     public function getAllProducts() {
         $productos = productoDAO::getAllProducts();
@@ -45,6 +45,15 @@ class APIController {
             $puntuacion = $data['puntuacion'];
 
             reviewDAO::insertReview($usuarioid, $pedidoid, $nombre, $apellidos, $titulo, $cuerpo, $fecha, $puntuacion);
+    }
+
+    public function encontrarReview() {
+        $id = $_GET['pedidoid'];
+        $encontrado = reviewDAO::encontrarReview($id);
+        $encontrado = json_encode($encontrado, JSON_UNESCAPED_UNICODE);
+        echo $encontrado;
+        return;
+
     }
 }
 

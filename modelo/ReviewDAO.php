@@ -27,6 +27,17 @@ class ReviewDAO {
         
     }
 
+    public static function encontrarReview($id) {
+        $con = database::connect();
+        $result = $con->query("SELECT COUNT(*) AS NUMREVIEWS FROM REVIEWS WHERE PEDIDO_ID = '$id';");
+        $row = $result->fetch_assoc();
+        if($row['NUMREVIEWS'] > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 
 

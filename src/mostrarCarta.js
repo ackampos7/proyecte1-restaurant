@@ -45,4 +45,6 @@ fetch("http://localhost/proyecte1-restaurant/?controller=API&action=getAllProduc
                     divproductos.appendChild(divproducto);
                 })
             }
-        })
+        });
+
+
