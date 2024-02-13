@@ -118,6 +118,12 @@ class usuarioDAO {
         $result = $con->query("DELETE FROM USUARIOS WHERE usuario_id = '$id'");
     }
 
+    public static function modificarPuntos($usuarioid, $puntos)
+    {
+        $con = database::connect();
+        $result = $con->query("UPDATE USUARIOS SET puntos = '$puntos' WHERE USUARIO_ID = '$usuarioid;");
+    }
+
 }
 
 

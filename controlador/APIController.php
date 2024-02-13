@@ -55,6 +55,15 @@ class APIController {
         return;
 
     }
+
+    public function modificarPuntos()
+    {
+        $data = json_decode(file_get_contents('php://input'), true);
+        $usuarioid = $_SESSION['usuario']->getUsuarioId();
+        $puntos =  $data['puntos'];
+
+        usuarioDAO::modificarPuntos($usuarioid, $puntos);
+    }
 }
 
 ?>

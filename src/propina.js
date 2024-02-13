@@ -30,12 +30,12 @@ activarpropina.addEventListener('change', function() {
         inputpropina.classList.add('readonly-style');
     }
 
-    precioTotal(activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos);
+    precioTotal(activarpuntos, activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos, puntosusuario);
     
 })
 
 inputpropina.addEventListener('change', function() {
-    precioTotal(activarpuntos, activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos);
+    precioTotal(activarpuntos, activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos, puntosusuario);
 }) 
 
 activarpuntos.addEventListener('change', function() {
@@ -47,11 +47,11 @@ activarpuntos.addEventListener('change', function() {
         inputpuntos.classList.add('readonly-style');
     }
 
-    precioTotal(activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos);
+    precioTotal(activarpuntos, activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos, puntosusuario);
 })
 
 inputpuntos.addEventListener('change', function() {
-    precioTotal(activarpuntos, activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos);
+    precioTotal(activarpuntos, activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos, puntosusuario);
 })
 
 function comprobarPropina(activarpropina, inputpropina) {
@@ -80,24 +80,47 @@ function comprobarPuntos(inputpuntos, activarpuntos)
 
 function calcularPrecioPuntos (preciopropina, puntos) 
 {
-    return preciopropina - puntos/100;
+    let preciofinal = preciopropina - puntos/100;
+    if (preciofinal < 0) {
+        preciofinal = 0;
+    }
+
+    return preciofinal;
 }
 
-function showPrecio(propina, preciototal, textoprecio, inputpreciototal, puntos) 
+function showPrecio(propina, preciototal, textoprecio, inputpreciototal, puntos, inputpuntos) 
 {
     preciototal = parseFloat(preciototal);
     preciototal = preciototal.toFixed(2);
     textoprecio.innerHTML = preciototal + "€";
     inputpreciototal.value = preciototal;
     valorpropina.value = propina;
-
 }
 
-function precioTotal(activarpuntos, activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos) 
+function modificarPuntos(puntosRestados, puntosusuario, preciototal)
+{
+    let puntosSumados = preciototal*100;
+
+    let puntostotales = puntosusuario - puntosRestados + puntosSumados;
+
+    fetch("http://localhost/proyecte1-restaurant/?controller=API&action=modificarPuntos", {
+            method: 'POST',
+            body: JSON.stringify({
+                    puntos: puntostotales,
+            }),
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8',
+            }
+            
+        })
+}
+
+function precioTotal(activarpuntos, activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos, puntosusuario) 
 {
     let propina = comprobarPropina(activarpropina, inputpropina);
     let preciopropina = calcularPrecioPropina(backupprecio, propina);
     let puntos = comprobarPuntos(inputpuntos, activarpuntos);
     let preciototal = calcularPrecioPuntos(preciopropina, puntos);
-    showPrecio(propina, preciototal, textoprecio, inputpreciototal, puntos);
+    showPrecio(propina, preciototal, textoprecio, inputpreciototal, puntos, inputpuntos);
+    modificarPuntos(puntos, puntosusuario, preciototal);
 }
