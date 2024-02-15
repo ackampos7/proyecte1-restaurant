@@ -5,7 +5,7 @@
                 <h2>Añadir Reseña</h2>
                 <div class="d-flex formreseñas">
                     <div>
-                        <label for="nombre">Nombre</label>
+                        <label for="titulo">Titulo</label>
                         <br>
                         <input class="input-reseña" id="tituloreseña" type="text"></input>
                     </div>

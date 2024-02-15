@@ -121,7 +121,9 @@ class usuarioDAO {
     public static function modificarPuntos($usuarioid, $puntos)
     {
         $con = database::connect();
-        $result = $con->query("UPDATE USUARIOS SET puntos = '$puntos' WHERE USUARIO_ID = '$usuarioid;");
+        $result = $con->query("UPDATE USUARIOS SET puntos = '$puntos' WHERE USUARIO_ID = '$usuarioid';");
+        $usuario = usuarioDAO::getUsuarioById($usuarioid);
+        $_SESSION['usuario'] = $usuario;
     }
 
 }

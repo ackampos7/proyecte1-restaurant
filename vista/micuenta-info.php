@@ -24,6 +24,7 @@
         <input type="text" name="contraseña" value="<?= $_SESSION['usuario']->getContraseña() ?>" placeholder="<?= $_SESSION['usuario']->getContraseña() ?>">
         <label for="email">Correo electronico</label>
         <input type="text" name="email" value="<?= $_SESSION['usuario']->getEmail() ?>" placeholder="<?= $_SESSION['usuario']->getEmail() ?>">
+        <input type="text" name="puntos" value="<?= $_SESSION['usuario']->getPuntos() ?>" placeholder="<?= $_SESSION['usuario']->getPuntos() ?>">
         <input type="hidden" name="id" value="<?= $_SESSION['usuario']->getUsuarioid() ?>">
         <input class="button-submit" type="submit" name="modificarusuario" value="Modificar Usuario">
     </form>

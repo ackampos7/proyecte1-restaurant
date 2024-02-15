@@ -20,7 +20,6 @@
                     $preciototal = $preciototal + $precioproductototal;
             ?>  
 
-            <input type="hidden" name="preciototal" id="preciobase" value="<?= $preciototal ?>">
             <tr class="row-producto">
                 <td><img src="<?php echo $productoCarro->getImg() ?>" height="143" width="212.83" alt="Imagen del producto"></td>
                 <td><?= $productoCarro->getNombre() ?></td>
@@ -48,6 +47,7 @@
     </table>
     </div>
     <div class="row container-precio">
+    <input type="hidden" name="preciototal" id="preciobase" value="<?= $preciototal ?>">
         <div class="col-12 col-md-6 col-lg-6 preciototal">
             <div class="div-modificarprecio">
                 <input type="checkbox" id="activar-propina" checked>Propina
@@ -64,7 +64,7 @@
             <input type="hidden" name="puntosusuario" id="puntosusuario" value="<?= $_SESSION['usuario']->getPuntos() ?>">
             <input type="hidden" name="propina" id="propina" value="3">
             <input type="hidden" name="preciototal" id="preciototal" value="<?= $preciototal ?>">
-            <input class="m-0 finalizar-button" type="submit" name="finalizarpedido" value="Finalizar pedido">
+            <input class="m-0 finalizar-button" id="finalizar" type="submit" name="finalizarpedido" value="Finalizar pedido">
         </form>
         </div>
     </div>

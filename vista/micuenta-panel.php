@@ -19,6 +19,7 @@
                 <h3>Información de la cuenta</h3>
                 <p><strong>Nombre: </strong><?php echo $_SESSION['usuario']->getNombre()." ".$_SESSION['usuario']->getApellidos() ?></p>
                 <p><strong>Correo electrónico: </strong><?php echo $_SESSION['usuario']->getEmail() ?></p>
+                <p><strong>Puntos: </strong><?php echo $_SESSION['usuario']->getPuntos() ?> Puntos</p>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-4 ultimo-pedido">
                 <h3>Ultimo pedido</h3>

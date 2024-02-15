@@ -3,6 +3,7 @@
 include_once 'modelo/reviewDAO.php';
 include_once 'modelo/pedidoDAO.php';
 include_once 'modelo/productoDAO.php';
+include_once 'modelo/usuarioDAO.php';
 
 class APIController {
 
@@ -59,7 +60,7 @@ class APIController {
     public function modificarPuntos()
     {
         $data = json_decode(file_get_contents('php://input'), true);
-        $usuarioid = $_SESSION['usuario']->getUsuarioId();
+        $usuarioid = $_SESSION['usuario']->getUsuarioid();
         $puntos =  $data['puntos'];
 
         usuarioDAO::modificarPuntos($usuarioid, $puntos);

@@ -9,6 +9,8 @@ let activarpuntos = document.getElementById("activar-puntos");
 let inputpuntos = document.getElementById("puntos-input");
 let backupprecio = preciobase;
 
+let precioT, puntos;
+
 inputpuntos.max = puntosusuario;
 
 if (activarpropina.checked) {
@@ -95,13 +97,15 @@ function showPrecio(propina, preciototal, textoprecio, inputpreciototal, puntos,
     textoprecio.innerHTML = preciototal + "€";
     inputpreciototal.value = preciototal;
     valorpropina.value = propina;
+
+    return preciototal;
 }
 
-function modificarPuntos(puntosRestados, puntosusuario, preciototal)
-{
-    let puntosSumados = preciototal*100;
+finalizar.addEventListener("click", function() {
+    let puntosSumados = precioT*100;
 
-    let puntostotales = puntosusuario - puntosRestados + puntosSumados;
+    let puntostotales = puntosusuario - puntos + puntosSumados;
+    console.log(puntostotales);
 
     fetch("http://localhost/proyecte1-restaurant/?controller=API&action=modificarPuntos", {
             method: 'POST',
@@ -113,14 +117,14 @@ function modificarPuntos(puntosRestados, puntosusuario, preciototal)
             }
             
         })
-}
+})
 
 function precioTotal(activarpuntos, activarpropina, inputpropina, backupprecio, textoprecio, inputpreciototal, inputpuntos, puntosusuario) 
 {
     let propina = comprobarPropina(activarpropina, inputpropina);
     let preciopropina = calcularPrecioPropina(backupprecio, propina);
-    let puntos = comprobarPuntos(inputpuntos, activarpuntos);
+    puntos = comprobarPuntos(inputpuntos, activarpuntos);
     let preciototal = calcularPrecioPuntos(preciopropina, puntos);
-    showPrecio(propina, preciototal, textoprecio, inputpreciototal, puntos, inputpuntos);
-    modificarPuntos(puntos, puntosusuario, preciototal);
+    precioT = showPrecio(propina, preciototal, textoprecio, inputpreciototal, puntos, inputpuntos);
+    
 }
