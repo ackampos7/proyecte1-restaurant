@@ -5,7 +5,7 @@
                 <p>Conoce las reseñas del Restaurant Ricardo Tormo</p>
             </div>
             <div class="intro-imagen">
-                <img class="col-12 col-sm-12 col-md-6 col-lg-6" src="imagenes/placeholder.jpg" alt=""></img>
+                <img class="col-12 col-sm-12 col-md-6 col-lg-6" src="imagenes/categorias/reseñas.jpg" alt=""></img>
             </div>
         </div>
     </section>
